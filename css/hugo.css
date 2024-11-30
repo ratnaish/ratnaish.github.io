@@ -316,7 +316,11 @@ Content Styles
 .text-upper{text-transform: uppercase !important;}
 .text-caps{text-transform: capitalize !important;}
 
-.section-title{text-transform: uppercase;}
+.section-title{
+	text-transform: uppercase;
+	font-weight: 400;
+	color:#004225;
+	}
 
 .abs-pos{
 		position:absolute;
