@@ -435,6 +435,10 @@ intro
 }
 
 #top-slide h1,
+#top-slide h2,
+#top-slide h3,
+#top-slide h4,
+#top-slide h5,
 #top-slide h6{
 	          color:#fff;
 }
