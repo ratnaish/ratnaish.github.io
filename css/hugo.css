@@ -77,12 +77,12 @@ h1,h2,h3,h4,h5,h6{
 
 h1 {
 	font-size: 4.2em;
-	letter-spacing: 0.10em;
+	letter-spacing: 0.02em;
 	font-weight: 300;
 }
 h2 {
 	font-size: 2.2em;
-	letter-spacing: 0.10em;
+	letter-spacing: 0.02em;
 	font-weight: 100;
 }
 h3 {
@@ -109,7 +109,7 @@ h6 {
 	position:relative;
 	background:#292929;
 	padding:6px 8px;
-	font-family: 'Open Sans', sans-serif; 
+	font-family: 'Oswald', sans-serif; 
 	color:#fff;
 	font-size:12px;
 	position:relative;
@@ -187,7 +187,7 @@ Content Styles
 }
 .container p{
 	max-width:800px;
-	margin:0 auto;
+	margin:0px auto 20px auto;
 }
 .respimg{
 	width:100%;
@@ -318,7 +318,7 @@ Content Styles
 
 .section-title{
 	text-transform: uppercase;
-	font-weight: 400;
+	font-weight: 600;
 	color:#004225;
 	}
 
