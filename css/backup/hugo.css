@@ -361,6 +361,8 @@ Navigation
 	height: 70px;
 	background:#fff;
 	z-index:10;
+	border-top:1px solid #292929;
+	border-bottom:1px solid #ccc;
 }
 .nav-button{
 	display:none;
@@ -387,7 +389,7 @@ Navigation
 	display:block;
 	font-size: 16px;
 	font-weight:500;
-	font-family: "Oswald",sans-serif;n
+	font-family: "Oswald",sans-serif;
 	color:#004225;
 	text-transform: uppercase;
 	padding: 10px;
@@ -395,8 +397,38 @@ Navigation
 	line-height: 30px;
 	letter-spacing: .05em;
 }
-
-
+.inner li.current:before{
+	top: 0;
+	margin-top:-10px;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.inner li.current:before {
+	border-top-color: #292929;
+	border-width: 8px;
+	margin-left: -8px;
+}
+.inner li.current:after{
+	top: 0;
+	margin-top: -12px;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.inner li.current:after {
+	border-top-color: #fff;
+	border-width: 7px;
+	margin-left: -7px;
+}
 .link-holder li a:hover , .inner li.current a{
 	color:#ccc;
 	-webkit-transition: color 0.33s linear;
