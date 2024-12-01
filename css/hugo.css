@@ -331,8 +331,8 @@ Content Styles
 
 .abs-pos.bottom-left{
 		position:absolute;
-		bottom:50px;
-		left:50px;
+		bottom:0px;
+		left:20px;
 }
 
 .abs-pos img{
