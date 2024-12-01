@@ -108,6 +108,9 @@ h6 {
 .link{
 	position:relative;
 	display: block;
+	border-radius:8px;
+	text-align: center;
+	width:50%;
 	background:#292929;
 	padding:10px 18px;
 	font-family: 'Oswald', sans-serif; 
@@ -331,8 +334,8 @@ Content Styles
 
 .abs-pos.bottom-left{
 		position:absolute;
-		bottom:0px;
-		left:20px;
+		bottom:-25px;
+		left:50px;
 }
 
 .abs-pos img{
@@ -588,6 +591,7 @@ Testimonials
 .testimonials-parallax{
 	background:url(../images/hugo/testimonials-bg.jpg);
 	background-attachment:fixed;
+	background-size:cover;
 	z-index:1;
 }
 .testimonials-line-parallax{
