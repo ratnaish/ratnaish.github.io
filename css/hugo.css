@@ -431,16 +431,24 @@ intro
 	z-index:5;
 }
 #top-slide .container{
-	margin-top:15%;	
+	margin-top:10%;	
 }
+
+#top-slide h1,
+#top-slide h6{
+	          color:#fff;
+}
+
 #top-slide h1{
-	color:#fff;
 	font-style: normal;
-	font-weight: 300;
+	font-weight: 400;
+	font-size: 38px !important;
 	line-height: 1.17em;
 	margin: 0 0 20px;
 	text-transform: uppercase
 }
+
+
 .top-section{
 	background:url(../images/bg/2.jpg);
 	background-attachment:fixed;
