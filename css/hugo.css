@@ -512,9 +512,7 @@ intro
 /* ====================
 About
 --------------------------------------------------------------*/
-#about h2 , #about .container p{
-	margin-top:70px;
-}
+
 .pad-bottom {
 	padding-bottom:90px;
 }
