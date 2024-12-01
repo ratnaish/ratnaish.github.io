@@ -107,8 +107,9 @@ h6 {
 }
 .link{
 	position:relative;
+	display: block;
 	background:#292929;
-	padding:6px 8px;
+	padding:10px 18px;
 	font-family: 'Oswald', sans-serif; 
 	color:#fff;
 	font-size:12px;
@@ -322,10 +323,16 @@ Content Styles
 	color:#004225;
 	}
 
-.abs-pos{
+.abs-pos.top-left{
 		position:absolute;
 		top:120px;
 		left:80px;
+}
+
+.abs-pos.bottom-left{
+		position:absolute;
+		bottom:50px;
+		left:50px;
 }
 
 .abs-pos img{
@@ -423,7 +430,7 @@ intro
 	  background-size:100%;
 }
 #top-slide{
-	position:absolute;
+	position:absolute;n
 	top:0;
 	left:0;
 	width:100%;
