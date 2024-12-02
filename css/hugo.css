@@ -625,8 +625,8 @@ About
 
 .about-parallax{
 	background:url(../images/letters-bg/hb-blue.png);
-	background-position:bottom;
-	opacity:0.92;
+	background-position: center bottom;
+	opacity:1;
 	background-attachment:fixed;
 }
 
