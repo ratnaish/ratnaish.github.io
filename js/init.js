@@ -332,8 +332,9 @@ $(document).ready(function(){
 		
 //  Parallax------------------
 		
-		$('.all-parallax-1').parallax("0%", 0.5);	
-		$('.all-parallax-2').parallax("100%", 0.3);	
+		$('.all-parallax-1').parallax("50%", 0.5);	
+		$('.all-parallax-2').parallax("50%%", 0.2);
+		$('.all-parallax-3').parallax("50%", 0.3);
 		$('.about-img-bg').parallax("50%", 0.2);	
 		$('.testimonials-parallax').parallax("100%", 0.3);		
 		$('.blog-post-parallax').parallax("50%", 0.1);
