@@ -624,6 +624,7 @@ About
 
 .about-image{
 	position:relative;
+	z-index:5;
 }
 
 .about-image:before{
@@ -635,6 +636,7 @@ About
 	right:-20%;
 	bottom:-20%;
 	background:url(../images/hugo-letter-logo-blue.png) 50% 50% no-repeat;
+	z-index:-5;
 }
 
 
