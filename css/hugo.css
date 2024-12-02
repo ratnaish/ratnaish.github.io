@@ -648,13 +648,6 @@ About
 	z-index:-3;
 }
 
-
-.about-parallax{
-	background:url(../images/letters-bg/about.png);
-	background-position:bottom;
-	opacity:0.2;
-	background-attachment:fixed;
-}
 .about-img{
 	padding:120px 0 0;
 	position:relative;
