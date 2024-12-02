@@ -204,7 +204,8 @@ Content Styles
 }
 .bg{
 	background-size: cover;
-	background-position: top;
+	background-position: 50% 50%;
+	background-repeat:no-repeat;
 }
 .parallax {
 	position:absolute;
@@ -301,7 +302,7 @@ Content Styles
 	left:0;
 	width:100%;
 	height:100%;
-	background:#fff url(../images/loader.GIF) no-repeat  center;
+	background:#fff url('../images/loader.gif') no-repeat  center;
 	z-index:100;
 }
 
@@ -344,43 +345,106 @@ Content Styles
 }
 
 
-.pad-y-10{
+.py-10{
 	padding-top:10px;
 	padding-bottom:10px;
 }
 
-.pad-y-20{
+.py-20{
 	padding-top:20px;
 	padding-bottom:20px;
 }
 
-.pad-y-30{
+.py-30{
 	padding-top:30px;
 	padding-bottom:30px;
 }
 
-.pad-y-40{
+.py-40{
 	padding-top:40px;
 	padding-bottom:40px;
 }
 
-.pad-y-50{
+.py-50{
 	padding-top:50px;
 	padding-bottom:50px;
 }
 
-.pad-y-70{
+.py-70{
 	padding-top:70px;
 	padding-bottom:70px;
 }
 
-.pad-y-80{
+.py-80{
 	padding-top:80px;
 	padding-bottom:80px;
 }
-.pad-y-90{
+.py-90{
 	padding-top:90px;
 	padding-bottom:90px;
+}
+
+
+
+.my-10{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.my-20{
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+.my-30{
+	margin-top:30px;
+	margin-bottom:30px;
+}
+
+.my-40{
+	margin-top:40px;
+	margin-bottom:40px;
+}
+
+.my-50{
+	margin-top:50px;
+	margin-bottom:50px;
+}
+
+.my-70{
+	margin-top:70px;
+	margin-bottom:70px;
+}
+
+.my-80{
+	margin-top:80px;
+	margin-bottom:80px;
+}
+.my-90{
+	margin-top:90px;
+	margin-bottom:90px;
+}
+
+
+.mb-10{
+	margin-bottom:10px;
+}
+
+.mb-20{
+	margin-bottom:20px;
+}
+
+.mb-30{
+	margin-bottom:30px;
+}
+
+.mb-40{
+	margin-bottom:40px;
+}
+
+
+.mb-50{
+	margin-bottom:50px;
 }
 
 
