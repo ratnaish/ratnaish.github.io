@@ -627,6 +627,15 @@ About
     max-width: 100%;
     margin: 0px auto 80px auto;
 }
+
+
+.about-parallax {
+    background: url(../images/letters-bg/hb-blue.png);
+    background-position: bottom;
+    opacity: 0.2;
+    background-attachment: fixed;
+
+
 .about-image{
 	position:relative;
 }
