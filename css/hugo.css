@@ -202,6 +202,11 @@ Content Styles
 	width:100%;
 	position:relative;
 }
+
+.sections img{
+	max-width:90%;
+}
+
 .bg{
 	background-size: cover;
 	background-position: 50% 50%;
@@ -439,14 +444,25 @@ Content Styles
 }
 
 .mb-40{
-	margin-bottom:40px;
+	margin-bottom:40px !important;
 }
 
 
 .mb-50{
-	margin-bottom:50px;
+	margin-bottom:50px !important;
 }
 
+.mb-60{
+	margin-bottom:60px !important;
+}
+
+.mb-70{
+	margin-bottom:70px !important;
+}
+
+.mb-80{
+	margin-bottom:80px !important;
+}
 
 
 /* ====================
