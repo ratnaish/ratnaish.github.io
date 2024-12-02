@@ -611,12 +611,14 @@ About
 }
 
 .about-image:before{
-	content: url(../images/hugo-letter-logo-blue.png);
+	content:"";
+	display:block;
 	position:absolute;
 	top:-20%;
 	left:-20%;
 	right:-20%;
 	bottom:-20%;
+	background:url(../images/hugo-letter-logo-blue.png) 50% 50% no-repeat;
 }
 
 
