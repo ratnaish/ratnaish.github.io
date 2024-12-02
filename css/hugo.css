@@ -622,6 +622,13 @@ About
 	padding-bottom:90px;
 }
 
+.about-parallax{
+	background:url(../images/letters-bg/hb-blue.png);
+	background-position:bottom;
+	opacity:0.92;
+	background-attachment:fixed;
+}
+
 .about-image{
 	position:relative;
 	z-index:5;
