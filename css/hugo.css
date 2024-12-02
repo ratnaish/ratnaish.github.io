@@ -28,7 +28,7 @@ body{
 	line-height:1.6;
 	text-align:center;
 	height:100%;
-	color:#666;	
+	color:#000000;	
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 	text-size-adjust: 100%;
@@ -605,6 +605,21 @@ About
 .pad-bottom {
 	padding-bottom:90px;
 }
+
+.about-image{
+	position:relative;
+}
+
+.about-image:before{
+	content:"url(../images/hugo-letter-logo-blue.png)";
+	position:absolute;
+	top:-20%;
+	left:-20%;
+	right:-20%;
+	bottom:-20%;
+}
+
+
 .about-parallax{
 	background:url(../images/letters-bg/about.png);
 	background-position:bottom;
