@@ -611,7 +611,7 @@ About
 }
 
 .about-image:before{
-	content:"url(../images/hugo-letter-logo-blue.png)";
+	content: url(../images/hugo-letter-logo-blue.png);
 	position:absolute;
 	top:-20%;
 	left:-20%;
