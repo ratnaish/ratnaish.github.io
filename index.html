@@ -1,980 +1,444 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
+<!--=============== basic  ===============-->
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1862143-100"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<meta charset="UTF-8">
+	<title>HUGO VAN DEN BERG</title>
+	<meta name="description" content="Your website description here">
+	<meta name="keywords" content="your, website, keywords, here">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+<!--=============== css  ===============-->	
 
-  gtag('config', 'UA-1862143-100');
-</script>
+	<link type="text/css" rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/magnific-popup.css" media="all">
+	<link type="text/css" rel="stylesheet" href="css/hugo.css">
 
-    <title>Quizzes with feedback - edugoto.com</title>
-    <meta name="description" content="" />
-   
-    <meta http-equiv="Content-Language" content="en" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/favicon-w.ico" type="image/x-icon">
-    <link href="css/layout.css" rel="stylesheet" type="text/css" media="all" />
-    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+<!--=============== fonts  ===============-->
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+	
+	
+<!--=============== favicons ===============-->
 
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 
-    <script>
-        $(document).ready(function() {
-			// Create PDF when button clicked
-            $("#create-pdf").click(function() {
-                $("#calc").submit();
-            });
-			
-			// Create JPG when button clicked
-            $("#create-image").click(function() {
-				// Change form url to "create-image.php"
-                $prevActionUrl = $("#calc").attr("action");
-                $("#calc").attr("action", "php/create-diabetes-image.php");
-				// Submit form and create JPG
-                $("#calc").submit();
-				// Change form url back to "create-pdf.php"
-                setTimeout(function() {
-                    $("#calc").attr("action", $prevActionUrl);
-                }, 100);
-            });
-			
-			// Shuffle images when loaded
-			var $questionareRadioImage = $(".questionare-radio-image");
-			var $qImages = $questionareRadioImage.children();
-			$.each($qImages, function(i,e) { $(e).detach();} );
-			shuffle($qImages);
-			$.each($qImages, function(i,e) { $(e).appendTo($questionareRadioImage);} );
-			$(".questionare-radio-image .radio-option input").first().prop("checked", true);
-			
-			// Check radiobutton when image is clicked 
-			$(".questionare-radio-image .radio-option").click(function(e){
-				$(this).find("input").prop("checked", true);
-			});
-			
-			// Prevent image dragging
-			$('.questionare-radio-image .radio-option img').on('dragstart', function(event) { event.preventDefault(); });
-        });
-		
-		/**
-		 * Shuffles array in place.
-		 * @param {Array} a items The array containing the items.
-		 */
-		function shuffle(a) {
-			var j, x, i;
-			for (i = a.length; i; i--) {
-				j = Math.floor(Math.random() * i);
-				x = a[i - 1];
-				a[i - 1] = a[j];
-				a[j] = x;
-			}
-		}
-    
-		// script for toggle button directoin
-		$(document).ready(function(){
-      $("[data-toggle='collapse']").on('click', function(){
-         if($(this).hasClass('collapsed')){
-            $(this).find("#img_collapse").attr('src', 'img/up-arrow.png');
-        } else
-          $(this).find("#img_collapse").attr('src', 'img/down-arrow-x.png');
-      });
-    });
-    </script>
+<!--=============== google map ===============-->
 
+	<!--script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script-->
+	
+	<!--[if lt IE 9]>
+	          <script src="js/html5shiv-3.7.3.min.js"></script>
+			  <script src="js/respond-1.4.2.min.js"></script>
+	<![endif]-->
 
+	
 </head>
 
 <body>
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=259400427427438&autoLogAppEvents=1"></script>
 
+	<!--================= Main start ================-->
+		
+	<div class="loader"></div>
+	
+	<section id="main">
 
-  <div id="page" class="container">
-  
-    <div id="header">
-    
-    
-    <ul id="menu">
-    
-    <li><a href="/">HOME</a></li>
-    <li><a href="list.htm">List</a></li>
-    <li><a href="#">Create quiz</a>
-    	<ul>
-        	<li><a href="/quiz/editor/cc-enter.html">Crossword</a></li>
-        	<li><a href="/quiz/editor/or-enter.html">Word game</a></li>
-        	<li><a href="/quiz/editor/m-enter.html">Multiple choice</a></li>
-   	    </ul>
-    </li>
-    <li><a href="faq.htm">FAQ</a></li>
-    
-    </ul>
-    
-    
-    
-    
-    </div>
+		<!--=============== navigation ===============-->
+		
+		<nav class="navigation">
+					
+			<div class="nav-button transition">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+				
+			<div class="inner container">
+				
+				<a href="#intro" class="logo scroll-to"><img class="respimg" src="images/hugo-logo.png" alt="" ></a>
+					
+				<div class="link-holder" id="nav">
+					
+					<ul>					
+						<li class="current"><a href="#intro" class="scroll-link">Home</a></li>
+						<li><a href="#about" class="scroll-link">Over</a></li>
+						<li><a href="#werk" class="scroll-link">Werk</a></li>
+						<li><a href="#sciante" class="scroll-link">Sciante</a></li>
+						<li><a href="#contacts" class="scroll-link">Contact</a></li>
+																	
+					</ul>
+						
+				</div>
+					
+			</div>
+		 
+		</nav><!--=============== navigation end ===============-->		
 
-    <form id="calc" method="post" action="php/create-diabetes-pdf1.php" target="_blank">
-      <div id="sidebar">
-        <div class="buttons">
-        
-          <h3><strong>edugoto.com</strong></h3>
-          </div>
-    
-       <br>
-            <b class="text-left">Webmaster</b>
-        <p>Anders Michael Nielsen<br>
-        M.Sc., Ph.D. & biology teacher<br>
-      
-           <br>
-      
-        <b>To teachers:</b>
-		<br>
-		Please don't hesitate to create your own quizzes for this site by either using one of the editors or the word templates.
-        Please also <b>encourage your students to rate the quizzes</b> so that the best quizzes can be promoted.
-        <br><br>  
-        <b>To students:</b>
-		<br>
-        This site is free - no sign-up, payment, registration or anything is required.
-        Please use the quizzes in that spirit and <b>rate them</b> so that the best quizzes can be promoted.
-        
-         <br>    <br>
-           
-           <b>How to create quizzes:</b>
-      <br>
-      Teachers can easily create quizzes using one of the <b>online editors</b> (<a href="/quiz/editor/cc-enter.html">Crossword</a>, <a href="/quiz/editor/m-enter.html">MultipleChoice</a>, <a href="/quiz/editor/or-enter.html">WordQuiz</a>) or by entering the quiz into one of the <b>Word templates</b> (<a href="/CC Template - websiteversion.docx">Crossword</a>, <a href="/MC Template - websiteversion.docx">MultipleChoice</a>, <a href="/WQ Template - websiteversion.docx">WordQuiz</a>) and <a href="mailto:andersmichaelnielsen@gmail.com">sending it to me</a>.
-     <br><br>
-     <div class="fb-like" data-href="https://edugoto.com" data-width="35" data-layout="button" data-action="like" data-size="small" data-share="false"></div>      
-<br>
-         </p>
-      <img src="img/andersmichaelnielsen.jpg" width="175" height="263">  
-        </p>
-        Contact me by</span> <strong><a href="mailto:andersmichaelnielsen@gmail.com">e-mail</a></strong></p>
-  
-      </div>
-      <div id="content">
-      <p>
-     
-      </p>
-      <p>
-        
-      </p>
-      
-        <!-- Biology (24 ordrebusser i alt) -->
-        <div data-toggle="collapse" data-target="#content_collapse_1">
-          <table>				  
-            <tbody>
-            <tr>
-              <td valign="top"><img id="img_collapse" src="img/up-arrow.png" width="20" height="20"></td>
-              <td valign="center"><h2>Biology (86)</h2></td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        
-        
-        <div id="content_collapse_1" class="collapse in collapse-inner">
-          
-          <div data-toggle="collapse" data-target="#content_collapse_1-1" class="collapsed">
-        
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>Cells (13)</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_1-1" class="collapse in collapse-content collapse-inner">
+		<!--================= Intro start ================-->
+		
+		<section id="intro" class="sections  bg">
 
-<font face="courier">0098</font> <a href="/w0033.htm">The phases of meiosis</a> (W 24Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0097</font> <a href="/m0033.htm">Meiosis - stages, crossing over and gametes</a> (M 21Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
+		<div class="abs-pos top-left">
+		<img src="images/hugo/hugo-letter-logo.png"  />
+		</div>
+			<div class="overlay"></div>
+			
+			
+			
+			<div id="top-slide">
+				<div class="content">
+					<div class="container">
+				
+					<div class="grid-full">
+					<div class="grid-3">
+					&nbsp;
+					</div>
+					<div class="grid-3">
+					<div id="text-rotator"  class="owl-carousel">
+							<div class="item">	
+								<h1 class="tlt">IK HELP KLANTEN OM<br>
+											KOSTEN EN ERGERNIS TE<br>
+										VERMINDEREN</h1>
+							<h6>Hugo van den Berg | Also known as mister optimize</h6>			
+							</div>
+						</div>
+					</div>
+					</div><!--.grid-full end-->
+				</div><!--.container end-->
+			</div>
+			
+		</section><!-- Intro end -->
+		
+		<!--================= About start ================-->
+		
+		<section id="about" class="sections white-bg py-50 text-left">
+			<div class="content">
+			
+				<div class="parallax bg about-parallax all-parallax-10"></div>
+				
+				<div class="container">
+					<p class="mb-80 text-center">il klanten helpen om kosten en ergernis te verminderen → en een goed draaiende IT omgeving achter te laten,
+zodat heel het bedrijf kan ﬂoreren. Door sofware en infra kwaliteit te verbeteren. Zet zich al decennia in om van
+IT een omzet genererende asset te maken in plaats van een kostenpost.</p>
 
-<font face="courier">0056</font> <a href="/w0019.htm">Under repair</a> (W 26Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0055</font> <a href="/c0019.htm">The cell cycle and its phases</a> (C 18Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0054</font> <a href="/m0019.htm">Regulation of the cell cycle and mitosis</a> (M 21Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
+                <div class="grid-full">
+					
+					<div class="grid-3">
+						
+						<img class="respimg" src="images/hugo/2.jpg">
+						
+					</div>
+					
+					<div class="grid-3">
+					<h2 class="section-title">Core Values</h2>
+					<p>De kwaliteit van de meeste software vandaag de dag is op een aantal
+						punten erg slecht. Één van die punten is IT performance, in gewone
+						mensen taal komt efficiëntie het dichts in de buurt. Door inefficiëntie
+						moeten mensen veel langer wachten dan nodig op allerlei applicaties,
+						websites e.d. Digitalisering hindert mensen vaker dan dat het ze helpt,
+						dat wordt ook door onderzoek onderbouwd.</p>
+					</div>
+					</div>
 
-<font face="courier">0035</font> <a href="/w0012.htm">Cell signalling, messengers and receptors</a> (M 22Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0034</font> <a href="/m0012.htm">Activation, initiation, cAMP and precursors in cell signalling</a> (M 21Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0033</font> <a href="/c0012.htm">Signal Transduction Pathways - the basics about cell communication</a> (C 18Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
+				</div>
+				<div class="clear"></div>
+				
+				
+				
+				
+				</div>
 
-<font face="courier">0008</font> <a href="/m0003.htm">Events during the cell cycle and essential terms about cells</a> (M 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0007</font> <a href="/c0003.htm">The cell cycle - the different phases, centrioles, chromatids etc ...</a> (C 19Q pre AP-level)<br/>                                      
+		</section><!-- about end -->
+		
+		
+		<!--================= Testimonials start ================-->
+		
+		<section id="testimonials" class="sections">
+			<div class="overlay dark-green-overlay"></div>
+			<div class="parallax bg  testimonials-parallax"></div>
+			<div class="parallax bg all-parallax-2"></div>	
+			
+			<div class="content">
+			<div class="abs-pos bottom-left">
+		<img src="images/hugo/hugo-green-logo.png"  />
+		</div>
+				<div class="container">
+				
+					<div id="testimonials-slider" class="owl-carousel">
+								
+						<!-- fist-slide -->
+									
+						<div class="item">
 
-<font face="courier">0006</font> <a href="/w0002.htm">Transport across semi-permeable membranes</a> (W 18Q AP-level)<br/>   
-<font face="courier">0005</font> <a href="/m0002.htm">Essential knowledge and terms about cell transport</a> (M, 20Q, AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0004</font> <a href="/c0002.htm">Cell Transport Processes – active and passive transport in and out of the cell</a> (C 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>                                      
+							<p class="transition"> "Ur serum elendit aectiorecea pro endae poreper
+uptatus modi ut debit, qui dolupiciur, quost maio eum
+ut enimusdam, sitat est, omnihil iquae. Itam volorio.
+Iciis ipsaper ferepe volorepro consed" </p>
+							
+					
+						</div>
+									
+						<!-- second-slide -->
+									
+						<div class="item">
+		
+							<p class="transition">" Aenean at lacus nec odio condimentum egestas. Pellentesque et pellentesque orci. Donec in commodo sapien. Donec id ante odio. "</p>
+							
+					
+						</div>
+									
+						<!-- third-slide -->
+												
+						<div class="item">
+						
+							<p class="transition">" Vestibulum accumsan viverra facilisis. Sed at euismod elit, eu convallis felis. Pellentesque pretium tellus non nisl placerat posuere. "</p>
+							
+						
+						</div>
+							
+					</div>
+				
+				</div>	
+							
+			</div>	
+						
+		</section><!-- Testimonials end -->
+		
+		
+		<!--================= Werk start ================-->
+		
+		<section id="werk" class="sections text-left">
+			<div class="content  py-70">
+			
+				<div class="parallax bg  "></div>
+				
+				<div class="container">
+					
+					<div class="grid-full">
+					
+					<div class="grid-3">
+					<img class="respimg" src="images/hugo/14.jpg">
+					</div>
+					
+					<div class="grid-3">
+					<h2 class="section-title">Werk</h2>
+					<p>Door mijn verblijf in de VS heb ik op mijn 13e al kennis kunnen maken
+						met computers. Op een teletype (dat is een printer met een toetsenbord
+						er aan, beeldschermen hadden we nog niet) via een modem verbinding
+						maken met een Dec PDP 8. Met 30 mensen op 4KB geheugen en je
+						programma’s opslaan op een paper tape omdat disk opslag veel te
+						duur was om door leerlingen te laten gebruiken. Van daaraf ben ik
+						programmeerbare rekenmachines gaan gebruiken, een Ti-57 onder
+						andere.
+						</p>
+						<p>
+						Op mijn middelbare school was 1 computer die in Basic geprogrammeerd
+						werd. Je kon per leerling 1 floppy disk kopen voor iet van 25 gulden en
+						daar moest je alles mee doen. Tijd op de computer moest je ruim van
+						tevoren reserveren en dan mocht je een uurtje.</p>
+					</div>
+					</div>
+					
+					
+					<div class="grid-full">
+					
+					<div class="grid-3">
+					
+					<p>Na een mislukt uitstapje naar technische natuurkunde in Delft ben ik
+						gaan werken in de datacommunicatie. Tegelijk ben ik een avond HTS
+						opleiding Technische Computer Kunde (TCK) gaan volgen. Voor die
+						opleiding ben ik met lof geslaagd, als 3e van mijn jaar.
+						Na de datacommunicatie heb ik diverse IT banen gehad waarbij 3 dingen
+						steeds terugkwamen, inrichten van omgevingen, programmeren en
+						efficiëntie.
+						</p>
+						<p>
+						In 1999 heb ik de overstap gemaakt naar een werkgever die
+						gespecialiseerd was in IT performance. Dat soort werkzaamheden ben
+						ik blijven doen tot ik in 2009 in Zweden op de camping bedacht dat het
+						vakgebied echt anders aangepakt moest worden om klanten echt te
+						kunnen helpen. Dat werd Sciante.</p>
+					</div>
+					
+					
+					<div class="grid-3">
+					<img class="respimg" src="images/hugo/13.jpg">
+					</div>
+					
+					
+					</div>
 
+				</div>
+				
+				<div class="clear"></div>
+				
+				</div>
 
-                </div>
-          
-          <div data-toggle="collapse" data-target="#content_collapse_1-2">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/up-arrow.png" width="20" height="20"></td>
-                <td valign="center"><h3>DNA & RNA (8)</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_1-2" class="collapse in collapse-content collapse-inner">
-          
-<font face="courier">0092</font> <a href="/w0031.htm">Discovering the structure of DNA</a> (W 24Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0091</font> <a href="/m0031.htm">DNA and RNA - discovery and basic concepts</a> (M 22Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
+		</section><!-- werk end -->
+		
+		
+		
+		
+		<!--================= Sciante start ================-->
+		
+		<section id="sciante" class="sections text-white text-left py-70">
+			<div class="content">
+			
+				<div class="parallax bg  all-parallax-1"></div>
+				
+				<div class="container">
+					
+					<div class="grid-full">
+					
+					<div class="grid-3">
+					<img class="respimg" src="images/hugo/sciante-logo.png">
+					<img class="respimg" src="images/hugo/sciante-left-column.jpg">
+					</div>
+					
+					<div class="grid-3">
+					<h2 class="section-title">Sciante</h2>
+					<p>In 2009 kwam ik tot de conclusie dat er 3 dingen
+						fundamenteel mis waren met IT performance:
+						Er werd redelijk houtje touwtje gemeten, met een lage
+						datakwaliteit en te weinig inzicht als gevolg;
+						Er waren mooie dashboards, maar weinig ondersteuning om root
+						causes te vinden;
+						Het vakgebied was te veel gericht op techniek, en te weinig op
+						problemen in de echte wereld.
+						Om dat te verbeteren is in 2010 Sciante opgericht. Binnen Sciante is
+						een betere oplossing bedacht en gebouwd. Daar is in 2010 en 2011
+						pilot mee gedraaid bij verschillende klanten.
+						<h4 class="section-title">IN 2011 VOLGDE DE EERSTE PRODUCTIE KLANT.</h4>
+						Daar was een data warehouse dat om 9:00 klaar moest zijn, maar op
+						een goede dag was dat pas om 11:00. 1700 mensen konden uren
+						hun werk niet doen. Iedereen en zijn oma had er al naar gekeken
+						en niemand snapte het. 15 minuten nadat we begonnen te meten
+						hadden we het probleem en de oplossing duidelijk. Een beter bewijs
+						dat onze aanpak een structurele verbetering bracht konden we ons
+						niet wensen.
 
-<font face="courier">0032</font> <a href="/w0011.htm">The structure of DNA and RNA</a> (W 14Q AP-level)<br/>   
-<font face="courier">0031</font> <a href="/c0011.htm">Basepairing, helicase, Okazaki fragments, topoisomerase</a> (C, 20Q, AP-level)<br/>   
-<font face="courier">0030</font> <a href="/m0011.htm">DNA and RNA - the basics</a> (M, 18Q, AP-level)<br/>   
+						
+						</p>
+						<p>
+						<a href="#" class="link">CTA</a>
+						</p>
+					</div>
+					</div>
 
-<font face="courier">0020</font> <a href="/w0007.htm">The Central Dogma and transcription and translation</a> (W 30Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0019</font> <a href="/m0007.htm">Transcription and Translation - RNA sequences, anticodons and more</a> (M 18Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0018</font> <a href="/c0007.htm">About bases, codons, nucleotides, t-RNA and polymerase</a> (C 17Q AP-level <img src="img/video.png" width="12" height="12">)<br/>                                      
-            
-            
-           
-            
-          </div>
-          
-          <div data-toggle="collapse" data-target="#content_collapse_1-3" class="collapsed">
-          
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>Ecology (23)</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_1-3" class="collapse in collapse-content collapse-inner">
+				</div>
+				
+				<div class="clear"></div>
+				
+				</div>
 
-<font face="courier">0071</font> <a href="/w0024.htm">Biogeochemical cycles - nutrient cycles, lithosphere, bacterial processes</a> (W 22Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0070</font> <a href="/c0024.htm">Assimilation, decomposition, denitrification and CHNOPS</a> (C 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0069</font> <a href="/m0024.htm">Biogeochemical cycles: nitrogen-, phosphorus- and sulfur cycle</a> (M 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
+		</section><!-- sciante end -->
+		
+		
+		
+		
+		
+		<!--================= Contacts start ================-->
+		
+		<section id="contacts" class="sections white-bg">	
+			<div class="content">
+				<div class="container">
+					<h2>Contacts</h2>
+					
+					<div class="contactForm clear">
+					
+						<fieldset id="contact_form">											
+									
+							<div class="grid-half">
+								<label for="name">Name</label>
+								<input type="text" name="name" id="name" />
+							</div>
+									
+							<div class="grid-half">
+								<label for="email" class="em">Email</label>
+								<input type="text" name="email" id="email"  class="right" />
+							</div>
+									
+							<label for="message" class="m-top">Message</label>
+							<textarea name="message"  id="message" ></textarea>
+									
+							<div class="clear"></div>
+																
+							<label>
+								<button class="submit_btn transition link" id="submit_btn">SEND</button>
+							</label>
+							<div id="result"></div>
+							
+						</fieldset>
+							
+					</div>
+					
+					<hr class="rast">
+					<div class="clear"></div>
+					
+					<div class="contact-info">
+					
+						<ul>
+							<li>+(057) 123456 <span>Call us</span></li>
+							<li>yourmail@gmail.com <span>Write us</span></li>
+							<li class="show-map">Amphitheatre Parkway, PA 94043 <span>Locate us on map</span></li>
+						</ul>
+	
+					</div>
+				
+				</div>
+			
+			</div>
+		
+		</section><!-- contacts end -->
+		
+		
 
-<font face="courier">0059</font> <a href="/w0020.htm">Population Ecology - survivorship curves and r- and K-selected species</a> (W 24Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0058</font> <a href="/m0020.htm">Population density, distribution, size, sex ratio, and age structure</a> (M 16Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0057</font> <a href="/c0020.htm">Population ecology - density/distribution, growth curves and limiting factors</a> (C 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-
-<font face="courier">0053</font> <a href="/c0018.htm">Calvin cycle and water management</a> (W 14Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0052</font> <a href="/c0018.htm">Basics about photosynthesis and the Calvin Cycle</a> (C 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0051</font> <a href="/m0018.htm">Photosynthesis and the Calvin Cycle</a> (M 14Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-
-<font face="courier">0028</font> <a href="/w0010.htm">Krebs Cycle, Calvin Cycle, light reactions and glycolysis</a> (M 30Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0027</font> <a href="/m0010.htm">Photosynthesis and respiration - Krebs Cycle, Calvin Cycle and more</a> (M 39Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-
-<font face="courier">0026</font> <a href="/w0009.htm">Photosynthesis - light- and dark reactions, pigments, PS II and PS I</a> (W 15Q pre AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0025</font> <a href="/m0009.htm">The different components or processes of photosynthesis</a> (M 15Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0024</font> <a href="/c0009.htm">Photosynthesis - photosystems, light reactions and dark reactions</a> (C 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>                                       
-
-<font face="courier">0014</font> <a href="/w0005.htm">Ecosystems, Food Chains, and Population Growth</a> (W, 26Q, AP-level)<br/>   
-<font face="courier">0013</font> <a href="/m0005.htm">Growth curves, competition, trophic leves, food chains and food webs</a> (M 26Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0012</font> <a href="/c0005.htm">Ecosystems - vocabulary quiz</a> (C 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>                                      
-
-<font face="courier">0011</font> <a href="/w0004.htm">Chloroplasts, the Calvin Cycle, and plant adaptations</a> (W, 17Q, pre AP-level)<br/>   
-<font face="courier">0010</font> <a href="/m0004.htm">The basics about stomata, C3-, C4- and CAM plants</a> (M 19Q pre AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0009</font> <a href="/c0004.htm">Photosynthesis - basic concepts about how plants make sugar</a> (C 20Q pre AP-level <img src="img/video.png" width="12" height="12">)<br/>                                      
-
-<font face="courier">0003</font> <a href="/w0001.htm">Water potential - basic concepts</a> (W 15Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0002</font> <a href="/m0001.htm">Water potential, how it is calculated and which direction water flows</a> (M 15Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0001</font> <a href="/c0001.htm">Basic concepts about &Psi;</a> (C 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>                                      
-
-       
-                       
-                      
-          </div>
-          
-          
-              <div data-toggle="collapse" data-target="#content_collapse_1-4" class="collapsed">
-          
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>Physiology (12)</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_1-4" class="collapse in collapse-content collapse-inner">
-          
-
-<font face="courier">0083</font> <a href="/w0028.htm">Male and female reproductive system</a> (W 23Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0082</font> <a href="/m0028.htm">Function of sex hormones and the anatomy of females and males</a> (M 21Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0081</font> <a href="/c0028.htm">Reproductive system - key concepts</a> (C 18Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-
-<font face="courier">0065</font> <a href="/w0022.htm">Immune response, antigens, antibodies, B-cells, T-cells and their function</a> (W 18Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0064</font> <a href="/m0022.htm">Macrophages, MHC2, CD4 and (non)specific immune response</a> (M 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0063</font> <a href="/c0022.htm">Immune system - the basics</a> (C 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-       
-<font face="courier">0062</font> <a href="/w0021.htm">Coronavirus, receptors, SARS, spike proteins and mode of action</a> (W 24Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0061</font> <a href="/m0021.htm">The virology of the coronavirus</a> (M 22Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0060</font> <a href="/c0021.htm">Coronavirus - capsid, RNA, virions and how this specific type of virus works</a> (C 25Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-
-   
-<font face="courier">0041</font> <a href="/w0014.htm">Neurons, synapses - transmitters, channels and Na+/K+ pumps</a> (W 24Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0040</font> <a href="/m0014.htm">Nervous System - resting and threshold potentials, mV inside - outside the cell</a> (M 21Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0039</font> <a href="/c0014.htm">Neurotransmitters and action potentials</a> (C 18Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-
-            
-          </div>
-          
-          
-          
-                <div data-toggle="collapse" data-target="#content_collapse_1-5" class="collapsed">
-          
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>Genetics (11)</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_1-5" class="collapse in collapse-content collapse-inner">
-          
-<font face="courier">0088</font> <a href="/c0066.htm">Mendelian Genetics</a> (C 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-          
-<font face="courier">0087</font> <a href="/m0030.htm">Gene regulation</a> (M 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-
-<font face="courier">0050</font> <a href="/w0017.htm">Operons and gene activation</a> (W 22Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0049</font> <a href="/m0017.htm">Gene expression and its regulation - epigenetics and repressors</a> (M 21Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0048</font> <a href="/c0017.htm">Gene expression regulation - short questions</a> (C 17Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-
-<font face="courier">0038</font> <a href="/w0013.htm">Gene expression control, operons, promoters and more</a> (W 22Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0037</font> <a href="/m0013.htm">Gene regulation - promoters and operons</a> (M 21 AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0036</font> <a href="/c0013.htm">The role of operons and promoters in gene regulation</a> (C 19Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-
-<font face="courier">0017</font> <a href="/w0006.htm">Genetics - usage of basic terms</a> (W 14Q AP-level)<br/>   
-<font face="courier">0016</font> <a href="/m0006.htm">Mendelian Genetics - from Hitchhiker’s Thumb to Huntington's Disease</a> (M 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0015</font> <a href="/c0006.htm">The basic principles of inheritance</a> (C 25Q AP-level <img src="img/video.png" width="12" height="12">)<br/>  
-
-
-          
-          </div>
-          
-          <div data-toggle="collapse" data-target="#content_collapse_1-6" class="collapsed">
-          
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>Evolution (6)</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_1-6" class="collapse in collapse-content collapse-inner">
-          
-<font face="courier">0080</font> <a href="/w0027.htm">Evolution and heritable characteristics</a> (W 18Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0079</font> <a href="/m0027.htm">Speciation, cladograms, niches and gradualism</a> (M 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0078</font> <a href="/c0027.htm">Speciation and extinction</a> (C 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
- 
-<font face="courier">0077</font> <a href="/w0026.htm">Bottleneck & Founder effect and selection types</a> (W 19Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0076</font> <a href="/c0026.htm">Hardy-Weinberg, genetic variation and drift</a> (C 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0075</font> <a href="/m0026.htm">Natural selection - genetic drift and Hardy-Weinberg</a> (M 15Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-
-          </div>
-          
-          
-          
-             <div data-toggle="collapse" data-target="#content_collapse_1-7" class="collapsed">
-          
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>Energy, molecules & the Chemistry of Life (12)</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_1-7" class="collapse in collapse-content collapse-inner">
-           
-<font face="courier">0068</font> <a href="/w0023.htm">Cellular respiration - from autotrophs to Krebs Cycle</a> (W 30Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0067</font> <a href="/c0023.htm">Aerobic and anaerobic respiration</a> (C 25Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0066</font> <a href="/m0023.htm">Cellular Respiration - Krebs Cycle and the electron transport chain</a> (M 26Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-
-<font face="courier">0047</font> <a href="/w0016.htm">Macromolecules - types and structures</a> (W 24Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0046</font> <a href="/c0016.htm">Molecules - their properties and function</a> (C 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0045</font> <a href="/m0016.htm">Biological Molecules - structure and function</a> (M 24Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-
-<font face="courier">0044</font> <a href="/m0015.htm">Free Energy - the basics</a> (W 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0043</font> <a href="/m0015.htm">Free Energy - entropy, ectotherms, homeostasis and organisms</a> (M 17Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0042</font> <a href="/c0015.htm">Laws of thermodynamics and entropy - free energy</a> (C 18Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-
-<font face="courier">0023</font> <a href="/w0008.htm">Enzyme structure, activation energy and inhibition</a> (W 15Q AP-level <img src="img/video.png" width="12" height="12">)<br/>    
-<font face="courier">0022</font> <a href="/m0008.htm">Enzymes, cofactors and coenzymes, activators and inhibitors</a> (M 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0021</font> <a href="/c0008.htm">Different types of enzymes and their function</a> (C 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>                                      
- 
-          </div>
-          
-          
-           
-                <div data-toggle="collapse" data-target="#content_collapse_1-8" class="collapsed">
-          
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>Quizzes without feedback (1)</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_1-8" class="collapse in collapse-content collapse-inner">
-          
-<font face="courier">0101 Biology</font> <a href="/m0034.htm">Various biology questions</a> (M 30Q, Year 12)<br/>   
-
-
-          
-          </div>
-          
-          
-         </div>
-         
-         
-         
-        <hr>
-        
-        <!-- Dansk (13 ordrebusser i alt) -->
-        <div data-toggle="collapse" data-target="#content_collapse_2" class="collapsed">
-          <table>
-          
-          
-          				  
-            <tbody>
-            <tr>
-              <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-              <td valign="center"><h2>Calculus (0)</h2></td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        <div id="content_collapse_2" class="collapse collapse-inner"> 
-          
-          <div data-toggle="collapse" data-target="#content_collapse_2-1" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>G</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_2-1" class="collapse collapse-content collapse-inner">
-         
-           
-          </div>
-          
-          <div data-toggle="collapse" data-target="#content_collapse_2-2" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>....</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_2-2" class="collapse collapse-content collapse-inner">
-           
-          </div>
-          
-          <div data-toggle="collapse" data-target="#content_collapse_2-3" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>.....</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_2-3" class="collapse collapse-content collapse-inner">
-           
-          </div>
-          
-         </div>
-        <hr>
-        
-        <!-- Engelsk (10 ordrebusser i alt) -->
-        <div data-toggle="collapse" data-target="#content_collapse_3" class="collapsed">
-          <table>				  
-            <tbody>
-            <tr>
-              <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-              <td valign="center"><h2>Chemistry (7)</h2></td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        <div id="content_collapse_3" class="collapse in collapse-inner">
-          
-          <div data-toggle="collapse" data-target="#content_collapse_3-1" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>Atoms (3)</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_3-1" class="collapse in collapse-content collapse-inner">
-           
-           
-           <font face="courier">0074</font> <a href="/w0025.htm">Coulomb's Law, repulsion, electrons and shells</a> (W 24Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0073</font> <a href="/m0025.htm">Electron configuration of chemical elements</a> (M 22Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0072</font> <a href="/c0025.htm">Shells, subshells and orbitals</a> (C 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-
-          </div>
-          
-          <div data-toggle="collapse" data-target="#content_collapse_3-2" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>The Periodic Table (3)</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_3-2" class="collapse in collapse-content collapse-inner">
-           
-           <font face="courier">0095</font> <a href="/w0032.htm">Ionic charge, electron negativity and the periodic table</a> (W 22Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0094</font> <a href="/m0032.htm">Trends in ionization energy, atomic radii, and charge</a> (M 16Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0093</font> <a href="/c0032.htm">Atoms, electrons and the periodic table</a> (C 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-
-           
-          </div>
-          
-          <div data-toggle="collapse" data-target="#content_collapse_3-3" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>Chemistry quizzes without feedback (1)</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_3-3" class="collapse in collapse-content collapse-inner">
-           <font face="courier">0099</font> <a href="/c0034.htm">Elements of the periodic table</a> (C 14Q, Year 11)<br/>   
-
-          </div>
-          
-         </div>
-         
-         
-         <hr>
-         
-          <!-- Historie (13 ordrebusser i alt) -->
-        <div data-toggle="collapse" data-target="#content_collapse_7" class="collapsed">
-          <table>
-          
-          
-          				  
-            <tbody>
-            <tr>
-              <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-              <td valign="center"><h2>English (0)</h2></td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        <div id="content_collapse_7" class="collapse collapse-inner"> 
-          
-          <div data-toggle="collapse" data-target="#content_collapse_7-1" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>...</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_7-1" class="collapse collapse-content collapse-inner">
-           
-          </div>
-          
-          <div data-toggle="collapse" data-target="#content_collapse_7-2" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>...</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_7-2" class="collapse collapse-content collapse-inner">
-          
-           
-          </div>
-          
-          <div data-toggle="collapse" data-target="#content_collapse_7-3" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>.....</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_7-3" class="collapse collapse-content collapse-inner">
-           
-          </div>
-          
-         </div>
-         
-         <hr>
-         <!-- Idræt (13 ordrebusser i alt) -->
-        <div data-toggle="collapse" data-target="#content_collapse_4" class="collapsed">
-          <table>
-          
-          
-          				  
-            <tbody>
-            <tr>
-              <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-              <td valign="center"><h2>Environmental Science (9)</h2></td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        <div id="content_collapse_4" class="collapse in collapse-inner"> 
-          
-          <div data-toggle="collapse" data-target="#content_collapse_4-1" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>Population Ecology (3)</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_4-1" class="collapse in collapse-content collapse-inner">
-          
-<font face="courier">0059</font> <a href="/w0020.htm">Population Ecology - survivorship curves and r- and K-selected species</a> (W 24Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0058</font> <a href="/m0020.htm">Population density, distribution, size, sex ratio, and age structure</a> (M 16Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0057</font> <a href="/c0020.htm">Population ecology - density/distribution, growth curves and limiting factors</a> (C 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-
-            
-          </div>
-          
-          <div data-toggle="collapse" data-target="#content_collapse_4-2" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>Soil (3)</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_4-2" class="collapse in collapse-content collapse-inner">
-          
-<font face="courier">0086</font> <a href="/w0029.htm">Soil, subsoil, horizons and exchange capacity</a> (W 19Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0085</font> <a href="/m0029.htm">Soil formation, function, classification, and conservation.</a> (M 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0084</font> <a href="/c0029.htm">Weathering, eluviation, and loam - soil and soil dynamics</a> (C 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-
-          
-          </div>
-          
-          <div data-toggle="collapse" data-target="#content_collapse_4-3" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>Cycles (3)<img src="videoikon.png" width="16" height="16"></h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_4-3" class="collapse in collapse-content collapse-inner">
-            
-            
-<font face="courier">0071</font> <a href="/w0024.htm">Biogeochemical cycles - nutrient cycles, lithosphere, bacterial processes</a> (W 22Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0070</font> <a href="/c0024.htm">Assimilation, decomposition, denitrification and CHNOPS</a> (C 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-<font face="courier">0069</font> <a href="/m0024.htm">Biogeochemical cycles: nitrogen-, phosphorus- and sulfur cycle</a> (M 20Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-
-         </div>
-         
-         </div>
-         
-        <hr>
-        
-        <!-- Musik (13 ordrebusser i alt) -->
-        <div data-toggle="collapse" data-target="#content_collapse_21" class="collapsed">
-          <table>
-          
-          
-          				  
-            <tbody>
-            <tr>
-              <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-              <td valign="center"><h2>Physics (1)</h2></td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        <div id="content_collapse_21" class="collapse in collapse-inner"> 
-          
-          <div data-toggle="collapse" data-target="#content_collapse_21-1" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>Force (1)</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_21-1" class="collapse in collapse-content collapse-inner">
-          <font face="courier">0089</font> <a href="/w0030.htm">Free Body Diagrams</a> (W 22Q AP-level <img src="img/video.png" width="12" height="12">)<br/>   
-
-           
-          </div>
-          
-          <div data-toggle="collapse" data-target="#content_collapse_21-2" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>....</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_21-2" class="collapse collapse-content collapse-inner">
-           
-          </div>
-          
-          <div data-toggle="collapse" data-target="#content_collapse_21-3" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>.....</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_21-3" class="collapse collapse-content collapse-inner">
-           
-          </div>
-          
-         </div>
-        <hr>
-        
-        
-         <!-- Spansk (10 ordrebusser i alt) -->
-        <div data-toggle="collapse" data-target="#content_collapse_34" class="collapsed">
-          <table>				  
-            <tbody>
-            <tr>
-              <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-              <td valign="center"><h2>Latin</h2></td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        <div id="content_collapse_34" class="collapse collapse-inner">
-          
-          <div data-toggle="collapse" data-target="#content_collapse_34-1" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>....</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_34-1" class="collapse collapse-content collapse-inner">
-    
-           
-          </div>
-          
-          <div data-toggle="collapse" data-target="#content_collapse_34-2" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>....</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_34-2" class="collapse collapse-content collapse-inner">
-           
-          </div>
-          
-          <div data-toggle="collapse" data-target="#content_collapse_34-3" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>.....</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_34-3" class="collapse collapse-content collapse-inner">
-           
-          </div>
-          
-         </div>
-         
-         <hr>
-        
-         <!-- Engelsk (10 ordrebusser i alt) -->
-        <div data-toggle="collapse" data-target="#content_collapse_22" class="collapsed">
-          <table>				  
-            <tbody>
-            <tr>
-              <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-              <td valign="center"><h2>Spanish</h2></td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        <div id="content_collapse_22" class="collapse collapse-inner">
-          
-          <div data-toggle="collapse" data-target="#content_collapse_22-1" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"></td>
-                <td valign="center">
-                ...
-                </td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_22-1" class="collapse collapse-content collapse-inner">
-           
-          </div>
-          
-          <div data-toggle="collapse" data-target="#content_collapse_22-2" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"></td>
-                <td valign="center">...
-                </td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_22-2" class="collapse collapse-content collapse-inner">
-           
-          </div>
-          
-          <div data-toggle="collapse" data-target="#content_collapse_22-3" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"></td>
-                <td valign="center">...
-                </td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_22-3" class="collapse collapse-content collapse-inner">
-           
-          </div>
-          
-         </div>
-         
-         <hr>
-  
-         <!-- Spansk (10 ordrebusser i alt) -->
-        <div data-toggle="collapse" data-target="#content_collapse_77" class="collapsed">
-          <table>				  
-            <tbody>
-            <tr>
-              <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-              <td valign="center"><h2></h2></td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-        <div id="content_collapse_77" class="collapse in collapse-inner">
-          
-          <div data-toggle="collapse" data-target="#content_collapse_77-1" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3></h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          
-        
-
-          <div id="content_collapse_77-1" class="collapse in collapse-content collapse-inner">
-            
-          </div>
-          
-          <div data-toggle="collapse" data-target="#content_collapse_77-2" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>....</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_77-2" class="collapse collapse-content collapse-inner">
-           
-          </div>
-          
-          <div data-toggle="collapse" data-target="#content_collapse_77-3" class="collapsed">
-            <table>
-              <tbody>
-              <tr>
-                <td valign="top"><img id="img_collapse" src="img/down-arrow-x.png" width="20" height="20"></td>
-                <td valign="center"><h3>.....</h3></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <div id="content_collapse_77-3" class="collapse collapse-content collapse-inner">
-           
-          </div>
-          
-         </div>
-         
-         <hr>
-      
-     
-        
-      </div>
-    </form>
-  </div>
+		<div class="clear"></div>
+		
+		<!--================= footer start ================-->
+		
+		<footer class="sestions footer">
+		
+			<div class="container">
+			
+				<div class="social-list">
+					<ul>
+						<li><a href="#"  target="_blank">Facebook</a></li>
+						<li><a href="#"  target="_blank">Twitter</a></li>
+						<li><a href="#"  target="_blank">Dribbble</a></li>	
+					</ul>
+				
+				</div>
+				
+				<div class="footer-separator"></div>
+				<p> 2024  All rights reserved.</p>
+			
+			</div>
+			
+		</footer><!-- Footer end -->
+		
+	</section><!-- Main end -->
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/smoothscroll.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.nav.js"></script>
+	<script type="text/javascript" src="js/appear.js"></script>
+	<script type="text/javascript" src="js/jquery.easypiechart.js"></script>
+	<script type="text/javascript" src="js/jquery.sticky.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fittext.js"></script>
+	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript" src="js/init.js"></script>
+	
 </body>
 </html>
