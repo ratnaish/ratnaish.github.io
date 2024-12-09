@@ -282,7 +282,7 @@ Content Styles
 	left:0;
 	width:100%;
 	height:100%;
-	background:#fff url(../images/loader.GIF) no-repeat  center;
+	background:#fff url(../images/loader.gif) no-repeat  center;
 	z-index:100;
 }
 /* ====================
@@ -316,7 +316,7 @@ Navigation
 }
 
 .button-holder{
-	float:right;
+	display:inline-block;
 	position:relative;
 	z-index:2;
 	margin: 20px 0px;
@@ -325,7 +325,7 @@ Navigation
 
 
 .inner ul {
-	margin:10px 20px 0 0;
+	margin:10px 0px;
 }
 .inner ul li {
 	display:inline-block;
@@ -333,8 +333,8 @@ Navigation
 }
 .link-holder a{
 	display:block;
-	font-size: 12px;
-	padding: 10px 8px;
+	font-size: 15px;
+	padding: 10px 6px;
 	position:relative;
 	line-height: 30px;
 	letter-spacing: .115em;
