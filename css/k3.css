@@ -313,7 +313,6 @@ Navigation
 	position:relative;
 	display:inline-block;
 	z-index:2;
-	float:none;
 }
 
 .button-holder{
