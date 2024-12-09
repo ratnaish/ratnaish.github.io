@@ -334,7 +334,7 @@ Navigation
 .link-holder a{
 	display:block;
 	font-size: 12px;
-	padding: 10px;
+	padding: 10px 8px;
 	position:relative;
 	line-height: 30px;
 	letter-spacing: .115em;
@@ -429,10 +429,11 @@ Helper classes
 .section-title{
 	font-family:"Bevan",serif;
 	color:#121A4C;
-	font-size: 32px;
+	font-size: 22px;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 38.4px; /* 120% */
+	line-height: 38.4px;
+	letter-spacing:0.01em;
 	text-transform: uppercase;
 }
 
