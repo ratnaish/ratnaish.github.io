@@ -311,7 +311,7 @@ Navigation
 }
 .link-holder {
 	position:relative;
-	display:inline-block;
+	display:inline-block !important;
 	z-index:2;
 }
 
