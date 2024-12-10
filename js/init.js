@@ -12,7 +12,7 @@ function initMinima() {
 	
 // nav  ---------------------------------------	
 
-	/*$('#nav').onePageNav({
+	$('#nav').onePageNav({
 		currentClass: 'current',
 		changeHash: false,
 		scrollSpeed: 1550,
@@ -20,7 +20,7 @@ function initMinima() {
 		scrollThreshold: 0.7,
 		filter: '',
 		easing: 'swing',
-	});*/
+	});
 	
 	$('.nav-button').bind('click', function() {$('.link-holder').slideToggle(800);});
 	
@@ -34,11 +34,11 @@ function initMinima() {
 		}	
 	});	
 
-	/*$("a.scroll-to").bind('click', function(event) {
+	$("a.scroll-to").bind('click', function(event) {
 		event.preventDefault();
 		$.scrollTo( 
 			$(this).attr('href'),950,{easing:'swing',offset: 0,'axis':'y'} );
-	});*/
+	});
 	
 // fitText  ---------------------------------------	
 	

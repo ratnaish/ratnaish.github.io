@@ -7,12 +7,6 @@
 	++++Content Styles++++
 	++++Navigation++++
 	++++About++++
-	++++Team++++
-	++++Facts++++
-	++++Services++++
-	++++Folio++++
-	++++Blog++++
-	++++Contact++++
 	++++CSS Animation++++
 	++++Media++++
 	++++Retina++++
@@ -68,19 +62,26 @@ Grid
 
 
 @media screen and (min-width: 740px) {
-.grid-1,.grid-2,.grid-3,.grid-4,.grid-5,.grid-6,.grid-half,.grid-full {width: 96.969696969697%;margin: 0 1.515151515152%;float:left;}
-.grid-half {width: 46.969696969697%;margin: 0 1.515151515152%;}
+.grid-1,.grid-2,.grid-3,.grid-4,.grid-5,.grid-6,.grid-half,.grid-full{
+	width: 96.00%;
+	margin: 0 2%;
+	float:left;
+}
+.grid-half {
+	        width: 46.00%;
+            margin: 0 2%;
+           }
 }
 
 @media screen and (min-width: 740px) {
-  .grid-1     { width: 13.636363636364%; }
-  .grid-2     { width: 30.30303030303%; }
-  .grid-3,
-  .grid-half  { width: 46.969696969697%; }
-  .grid-4     { width: 63.636363636364%; }
-  .grid-5     { width: 80.30303030303%; }
-  .grid-6,
-  .grid-full  { width: 96.969696969697%; }
+  .grid-1     { width: 12.666666%; }
+  .grid-2     { width: 29.333333%; }
+  .grid-3     { width: 46%; }
+  .grid-half  { width: 46%; }
+  .grid-4     { width: 62.66666%; }
+  .grid-5     { width: 79.33333%; }
+  .grid-6     { width: 96%; }
+  .grid-full  { width: 96%; }
 }
 
 /* ====================
@@ -88,25 +89,25 @@ Typography
 --------------------------------------------------------------*/
 
 h1 {
-	font-size: 4.2em;
-	letter-spacing: 0.10em;
-	font-weight: 300;
+	font-size: 4.0em;
+	letter-spacing: 0.02em;
+	font-weight: 400;
 }
 h2 {
-	font-size: 2.2em;
-	letter-spacing: 0.10em;
-	font-weight: 100;
+	font-size: 2.0em;
+	letter-spacing: 0.02em;
+	font-weight: 400;
 }
 h3 {
-	font-size: 1em;
+	font-size: 1.2em;
 	text-transform: uppercase;
-	letter-spacing: 0.20em;
-	font-weight: 200;
+	letter-spacing: 0.10em;
+	font-weight: 400;
 }
 h4 {
-	font-size: 0.9em;
+	font-size: 1.0em;
 	text-transform: uppercase;
-	font-weight: 200;	
+	font-weight: 300;	
 }
 h5 {
 	font-size: 0.8em;
@@ -119,8 +120,8 @@ h6 {
 }
 .link{
 	position:relative;
-	background:#292929;
-	border:1px solid #292929;
+	background:#121A4C;
+	border:1px solid #121A4C;
 	border-radius: 8px;
     padding: 10px 20px;
 	font-family: 'Open Sans', sans-serif; 
@@ -136,7 +137,7 @@ h6 {
 
 
 .link:hover{
-	border:1px solid #292929;
+	border:1px solid #121A4C;
 	background:#fff;
 	color:#292929;
 	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
@@ -219,45 +220,8 @@ Content Styles
 .color-white{
 	color:#fff;
 }
-.separator{
-	width:250px;
-	margin:30px auto 40px;
-	position:relative;
-}
-.left-line {
-	position:absolute;
-	top:0;
-	left:0;
-	width:120px;
-	height:1px;
-	background:#666;
-	z-index:1;
-}
-.right-line {
-	position:absolute;
-	top:0;
-	right:0;
-	width:120px;
-	height:1px;
-	background:#666;
-	z-index:1;
-}
-.rhombus{
-	position:absolute;
-	top:0;
-	left:50%;
-	width:22px;
-	height:22px;
-	margin-left:-11px;
-	margin-top:-11px;
-	background:#fff;
-	border:1px solid #666;
-	-webkit-transform: rotate(45deg); 
-	-moz-transform: rotate(45deg); 
-	-o-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	z-index:2;		
-}
+
+
 .right{
 	float:right !important
 }
@@ -311,13 +275,16 @@ Navigation
 }
 .link-holder {
 	position:relative;
-	display:inline-block !important;
+	display:block;
+	float:left;
+	width:60%;
 	z-index:2;
 }
 
 .button-holder{
 	float:right;
 	position:relative;
+	width:20%;
 	z-index:2;
 	margin: 20px 0px;
 }
@@ -351,64 +318,81 @@ Navigation
 .inner a.logo{
 	position:relative;
 	display:block;
-	max-width:80px;
+	width:20%;
+	text-align:left;
 	float:left;
 }
+
+.inner a.logo img{
+	max-width:80px;
+}
+
 
 /* ====================
 Helper classes
 --------------------------------------------------------------*/
 
 
-.acc-container {
-    padding: 2rem 1rem;
-}
-.acc-btn {
-    width: 100%;
-    font-size: 1.0rem;
-	padding: 1rem 2rem;
-    border: 1px solid #121A4C;
-    border-radius: 10px;
-    cursor: pointer;
-    background: inherit;
-    outline: none;
-    text-align: left;
-    transition: all 0.5s linear;
-}
-.acc-btn:after {
-    content: "+";
-    color: #fa8d0c;
-    float: right;
-    transition: all 0.3s linear;
-}
-.acc-btn.is-open:after {
-	content: "-";
-    transform: rotate(90deg);
-}
-.acc-btn:hover, .acc-btn.is-open {
-    color: #000;
-    font-weight: bold;
-}
-
-.acc-content {
-    max-height: 0;
-    color: rgba(0,0,0,0.75);
-    margin: 0 2rem;
-    padding-left: 1rem;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-    border-bottom: 1px solid #ccc;
-}
-
-
-
-
 .text-left{text-align:left;}
 .text-center{text-align:center;}
 .text-right{text-align:right;}
 
+
+.bg-light{
+	background-color:#fff;
+}
+.bg-dark{
+	background-color:#121A4C;
+	color:#fff;
+}
+
+.p-10{
+	padding:10px;
+}
+
+.p-20{
+	padding:20px;
+}
+
+.p-30{
+	padding:30px;
+}
+
+.p-40{
+	padding:40px;
+}
+
 .p-50{
 	padding:50px;
+}
+
+
+.pt-10{
+	padding-top:10px;
+}
+
+.pt-20{
+	padding-top:20px;
+}
+
+.pt-30{
+	padding-top:30px;
+}
+
+.pt-40{
+	padding-top:40px;
+}
+
+.pt-50{
+	padding-top:50px;
+}
+
+.pt-90{
+	padding-top:90px;
+}
+
+.pb-50{
+	padding-bottom:50px;
 }
 
 .py-50{
@@ -424,6 +408,11 @@ Helper classes
 .py-90{
 	padding-top:90px;
 	padding-bottom:90px;
+}
+
+.py-100{
+	padding-top:100px;
+	padding-bottom:100px;
 }
 
 .section-title{
@@ -1619,34 +1608,14 @@ Contact form
 	position:relative;		
 }
 
-/* ====================
-Map
---------------------------------------------------------------*/
-
-.mapbox{
-	float:left;
-	width:100%;
-	height:0;
-	position:relative;
-	z-index:3;
-	overflow:hidden;	
-}
-#map_canvas { 
-	height: 450px; 
-	position:absolute;
-	top:0;
-	left:0; 
-	width:100%;
-	z-index:1; 
-}
 
 /* ====================
 Footer
 --------------------------------------------------------------*/
 
 .footer{
-	background:#292929;
-	padding:50px 0;
+	background:#121A4C;
+	color:#fff;
 }
 .social-list {
 	margin:25px auto;
@@ -1710,6 +1679,22 @@ Footer
 	font-size:12px;
 }
 
+.footer .quick-links li{margin:0px 0px 10px 0px;}
+.footer .quick-links a{color:#fff;}
+.footer .quick-links .fa{margin-right:10px;}
+.footer .office-hours{
+	background-color:#fff; 
+	color:#000;
+	-webkit-border-radius:8px;
+	-moz-border-radius:8px;
+	border-radius:8px;
+}
+
+.footer .payments ul li{
+	float:left;
+	margin:0px 5px 0px 0px;
+}
+
 /* ====================
 CSS animation
 --------------------------------------------------------------*/
@@ -1755,6 +1740,7 @@ CSS animation
 
 .button-holder{
 	margin-right:80px;
+	width:auto;
 }
 #top-slide .container{
 	margin-top:35%;	
