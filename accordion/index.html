@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML5 Template</title>
+	<link  rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+<div class="accordion" id="nav-section1">Why help animals?
+<span></span>
+</div>
+<div>
+    
+	Animals are sentient, individual beings who feel pain, fear, and joy. Yet every day, billions experience unbearable cruelty. Animals depend on us to give them the voice they deserve.
+	
+</div>
+
+<div class="accordion" id="nav-section2">
+What makes WAP different from other charities?
+<span></span>
+</div>
+<div>
+    
+	We start every conversation from the animal’s perspective. We help people understand that each animal is an individual with the right to live a life free from cruelty and suffering. Additionally, we are the only global animal welfare organization with general consultative status with the UN Economic and Social Council (ECOSOC) and all its subsidiary bodies, enabling us to engage with and influence global decision-makers.
+	
+</div>
+
+<div class="accordion" id="nav-section3">
+Do you really work around the world?<span></span>
+</div>
+<div>
+    For more than 70 years, World Animal Protection has worked across nearly 50 countries with offices in 12.
+	<br>Our USA office is headquartered in New York, NY.
+</div>
+
+<div class="accordion" id="nav-section4">
+How can I change my contact information?<span></span>
+</div>
+<div>
+    To change your contact information in our database, 
+	<br>please email us or call 646-783-2200, Monday-Friday, 9am-5pm ET.
+	
+</div>
+
+
+</div>
+<!--.container ends-->
+
+
+
+<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="jquery.accordion.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.accordion').accordion({
+        defaultOpen: 'section1',
+        cookieName: 'accordion_nav'
+    });
+  });
+</script>	
+</body>
+</html>
