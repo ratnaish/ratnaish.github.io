@@ -1,351 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" href="logo.png" />
-        <meta property="og:image" content="logo.png" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <meta name="description" content="Last Admin Dashboard" />
-        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimal-ui" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent" />
-        <link rel="apple-touch-icon" href="../src/assets/images/lastadmin_logo-removebg-preview.png" />
-        <meta name="apple-mobile-web-app-title" content="Flatkit" />
-        <meta name="description" content="Web site created using create-react-app" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <link rel="shortcut icon" sizes="196x196" href="../src/assets/images/lastadmin_logo-removebg-preview.png" />
-        <link rel="apple-touch-icon" href="/logo192.png" />
-        <link rel="manifest" href="/manifest.json" />
-        <title>Last Admin-Dashboard</title>
-        <link rel="stylesheet" href="static/css/bootstrap.min.css" />
-        <!--script defer="defer" src="static/js/main.1f433ea6.js"></script-->
-        <link href="static/css/main.d2891a6c.css" rel="stylesheet" />
-    </head>
-    <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div class="app" id="app">
-            <div>
-                <div id="aside" class="app-aside modal nav-dropdown">
-                    <div class="left navside dark dk" data-layout="column">
-                        <div class="navbar no-radius">
-                            <a class="navbar-brand" href="#/"><img src="static/media/lastadmin_logo-removebg-preview.1d5bbd1499101d125f7b.png" alt="logo" class="hide" /></a>
-                        </div>
-                        <div class="hide-scroll" data-flex="true">
-                            <nav class="scroll nav-light">
-                                <ul class="nav" ui-nav="true">
-                                    <li>
-                                        <a rel="noopener noreferrer" href="http:\\help.lastadmin.com" target="_blank">
-                                            <span class="nav-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                                    <path
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z"
-                                                    ></path>
-                                                </svg>
-                                            </span>
-                                            <span class="nav-text">Open Ticket</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="mailto:michael@lastadmin.com">
-                                            <span class="nav-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                                    <path
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z"
-                                                    ></path>
-                                                </svg>
-                                            </span>
-                                            <span class="nav-text">Email Last Admin</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#/calendar">
-                                            <span class="nav-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                                    <path
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
-                                                    ></path>
-                                                </svg>
-                                            </span>
-                                            <span class="nav-text">Calendar</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#/userTraining">
-                                            <span class="nav-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                                    <path
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z"
-                                                    ></path>
-                                                </svg>
-                                            </span>
-                                            <span class="nav-text">User Training</span>
-                                        </a>
-                                    </li>
-                                    <li id="allproject_change">
-                                        <a href="#/allprojects">
-                                            <span class="nav-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                                    <path
-                                                        stroke-linecap="round"
-                                                        stroke-linejoin="round"
-                                                        d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z"
-                                                    ></path>
-                                                </svg>
-                                            </span>
-                                            <span class="nav-text">Projects</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            rel="noopener noreferrer"
-                                            href="https://account.ui.com/login?redirect=https%3A%2F%2Funifi.ui.com%2Fconsoles%2FD8B370873EE60000000007A3B312000000000805652A0000000064C2723C%3A482279805%2Fnetwork%2Fdefault%2Fdashboard"
-                                            target="_blank"
-                                        >
-                                            <span class="nav-icon">
-                                                <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="24px" height="50px">
-                                                    <path
-                                                        d="M 19.8125 0 C 19.488281 0.0546875 19.210938 0.269531 19.074219 0.570313 C 18.9375 0.867188 18.957031 1.21875 19.125 1.5 C 20.65625 4.261719 21.066406 6.609375 20.96875 8.34375 C 20.871094 10.078125 20.164063 11.167969 19.84375 11.375 C 19.613281 11.523438 19.539063 11.511719 19.28125 11.46875 C 19.023438 11.425781 18.628906 11.277344 18.125 11.09375 C 17.121094 10.722656 15.558594 10.34375 13.8125 11.21875 C 13.542969 11.355469 13.347656 11.609375 13.289063 11.910156 C 13.226563 12.207031 13.304688 12.515625 13.5 12.75 C 13.820313 13.125 14.195313 13.925781 14.375 14.71875 C 14.554688 15.511719 14.53125 16.304688 14.34375 16.71875 C 14 17.476563 11.40625 18.992188 11.40625 23.28125 C 11.40625 24.742188 11.621094 26.269531 12.5625 28 L 3 28 C 1.355469 28 0 29.355469 0 31 L 0 37 C 0 37.765625 0.300781 38.46875 0.78125 39 C 0.300781 39.53125 0 40.234375 0 41 L 0 47 C 0 48.644531 1.355469 50 3 50 L 31 50 C 31.765625 50 32.46875 49.699219 33 49.21875 C 33.53125 49.699219 34.234375 50 35 50 L 47 50 C 48.644531 50 50 48.644531 50 47 L 50 41 C 50 40.234375 49.699219 39.53125 49.21875 39 C 49.699219 38.46875 50 37.765625 50 37 L 50 31 C 50 29.355469 48.644531 28 47 28 L 38.71875 28 C 39.363281 25.136719 38.507813 22.972656 37.40625 21.46875 C 36.773438 20.601563 36.082031 19.925781 35.625 19.34375 C 35.167969 18.761719 34.992188 18.351563 35 18.03125 C 35.03125 16.800781 35.964844 14.863281 36.0625 12.75 C 36.113281 11.695313 35.882813 10.539063 35.125 9.53125 C 34.367188 8.523438 33.148438 7.707031 31.34375 7.0625 C 31.011719 6.933594 30.632813 6.996094 30.355469 7.222656 C 30.078125 7.445313 29.941406 7.804688 30 8.15625 C 30.1875 9.414063 30.15625 10.574219 29.9375 11.21875 C 29.828125 11.542969 29.6875 11.710938 29.59375 11.78125 C 29.5 11.851563 29.425781 11.882813 29.15625 11.84375 C 28.570313 11.761719 28.6875 11.746094 28.65625 11.65625 C 28.625 11.566406 28.613281 11.097656 28.71875 10.4375 C 28.933594 9.113281 29.390625 7.023438 28.3125 4.84375 C 26.660156 1.511719 23.03125 0 20 0 C 19.96875 0 19.9375 0 19.90625 0 C 19.875 0 19.84375 0 19.8125 0 Z M 21.625 2.40625 C 23.574219 2.839844 25.574219 3.824219 26.53125 5.75 C 27.285156 7.277344 26.976563 8.710938 26.75 10.125 C 26.636719 10.832031 26.472656 11.523438 26.75 12.3125 C 27.027344 13.101563 27.890625 13.703125 28.875 13.84375 C 29.5625 13.941406 30.261719 13.761719 30.78125 13.375 C 31.300781 12.988281 31.617188 12.457031 31.8125 11.875 C 32.042969 11.199219 32.101563 10.421875 32.09375 9.625 C 32.746094 9.996094 33.253906 10.351563 33.53125 10.71875 C 33.980469 11.3125 34.097656 11.914063 34.0625 12.65625 C 33.992188 14.140625 33.046875 15.996094 33 17.96875 C 32.976563 19.011719 33.507813 19.851563 34.0625 20.5625 C 34.617188 21.273438 35.25 21.933594 35.78125 22.65625 C 36.761719 23.992188 37.453125 25.433594 36.6875 28 L 31.90625 28 C 32.214844 26.828125 32.289063 25.65625 32 24.5625 C 31.597656 23.03125 30.53125 21.707031 28.9375 20.71875 C 28.582031 20.503906 28.128906 20.535156 27.804688 20.789063 C 27.480469 21.046875 27.34375 21.480469 27.46875 21.875 C 27.71875 22.644531 27.621094 23.382813 27.40625 23.84375 C 27.191406 24.304688 26.957031 24.5 26.5 24.5 C 26.320313 24.5 26.144531 24.347656 25.96875 23.90625 C 25.792969 23.464844 25.828125 22.839844 25.90625 22.6875 C 27.179688 20.1875 27.417969 18.3125 27 16.84375 C 26.582031 15.375 25.550781 14.511719 24.78125 13.90625 C 24.570313 13.734375 24.300781 13.65625 24.03125 13.6875 C 23.757813 13.726563 23.511719 13.875 23.351563 14.097656 C 23.191406 14.324219 23.132813 14.605469 23.1875 14.875 C 23.421875 16.007813 23.289063 16.769531 22.96875 17.46875 C 22.648438 18.167969 22.09375 18.808594 21.4375 19.53125 C 20.125 20.972656 18.375 22.808594 18.375 25.875 C 18.375 26.140625 18.390625 26.984375 18.6875 28.03125 C 18.046875 28.101563 17.457031 28.367188 17 28.78125 C 16.46875 28.300781 15.765625 28 15 28 L 14.9375 28 C 13.558594 26.089844 13.40625 24.890625 13.40625 23.28125 C 13.40625 19.742188 15.222656 19.589844 16.15625 17.53125 C 16.625 16.488281 16.589844 15.324219 16.34375 14.25 C 16.214844 13.679688 15.898438 13.25 15.65625 12.75 C 16.28125 12.65625 16.832031 12.746094 17.4375 12.96875 C 17.882813 13.132813 18.34375 13.339844 18.9375 13.4375 C 19.53125 13.535156 20.296875 13.445313 20.9375 13.03125 C 22.164063 12.238281 22.84375 10.632813 22.96875 8.46875 C 23.066406 6.78125 22.566406 4.664063 21.625 2.40625 Z M 25.03125 17.34375 C 25.039063 17.367188 25.054688 17.382813 25.0625 17.40625 C 25.300781 18.246094 25.265625 19.542969 24.125 21.78125 C 24.113281 21.78125 24.105469 21.78125 24.09375 21.78125 C 23.628906 22.703125 23.730469 23.714844 24.09375 24.625 C 24.457031 25.535156 25.285156 26.5 26.5 26.5 C 27.730469 26.5 28.746094 25.695313 29.21875 24.6875 C 29.34375 24.421875 29.371094 24.105469 29.4375 23.8125 C 29.726563 24.214844 29.945313 24.648438 30.0625 25.09375 C 30.285156 25.941406 30.195313 26.914063 29.8125 28 L 20.8125 28 C 20.398438 26.972656 20.375 26.199219 20.375 25.875 C 20.375 23.53125 21.554688 22.359375 22.90625 20.875 C 23.582031 20.132813 24.304688 19.324219 24.78125 18.28125 C 24.910156 17.996094 24.949219 17.664063 25.03125 17.34375 Z M 3 30 L 15 30 C 15.566406 30 16 30.433594 16 31 L 16 37 C 16 37.566406 15.566406 38 15 38 L 3 38 C 2.433594 38 2 37.566406 2 37 L 2 31 C 2 30.433594 2.433594 30 3 30 Z M 19 30 L 37.125 30 C 37.316406 30.058594 37.527344 30.058594 37.71875 30 L 47 30 C 47.566406 30 48 30.433594 48 31 L 48 37 C 48 37.566406 47.566406 38 47 38 L 19 38 C 18.433594 38 18 37.566406 18 37 L 18 31 C 18 30.433594 18.433594 30 19 30 Z M 3 40 L 31 40 C 31.566406 40 32 40.433594 32 41 L 32 47 C 32 47.566406 31.566406 48 31 48 L 3 48 C 2.433594 48 2 47.566406 2 47 L 2 41 C 2 40.433594 2.433594 40 3 40 Z M 35 40 L 47 40 C 47.566406 40 48 40.433594 48 41 L 48 47 C 48 47.566406 47.566406 48 47 48 L 35 48 C 34.433594 48 34 47.566406 34 47 L 34 41 C 34 40.433594 34.433594 40 35 40 Z"
-                                                    ></path>
-                                                </svg>
-                                            </span>
-                                            <span class="nav-text">Firewall Dashboard</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a rel="noopener noreferrer" href="https://myaccount-business.cox.com/cbma/unauth/login" target="_blank">
-                                            <span class="nav-icon"><img src="static/media/foAq2r01.379bd8710014d736100ac85be50b8a94.svg" style="height: 24px; background-color: white;" /></span><span class="nav-text">Cox Outages</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="b-t">
-                            <div class="nav-fold">
-                                <a href="#/profile">
-                                    <span class="clear hidden-folded p-x">
-                                        <span class="block _500">Last Admin</span><small class="block text-muted"><i class="fa fa-circle text-success m-r-sm"></i>online</small>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="content" class="app-content box-shadow-z0" role="main">
-                <div class="app-header white box-shadow">
-                    <div class="navbar navbar-toggleable-sm flex-row align-items-center">
-                        <a data-toggle="modal" data-target="#aside" class="hidden-lg-up mr-3" href="#/"><i class="material-icons"></i></a>
-                        <div class="mb-0 h5 no-wrap" ng-bind="$state.current.data.title" id="pageTitle"></div>
-                        <div class="collapse navbar-collapse" id="collapse">
-                            <ul class="nav navbar-nav mr-auto">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link" href="#/" data-toggle="dropdown">
-                                        <span id="nav-top-header">
-                                            👋 Welcome to Your MyLand IT Dashboard! 🌐 We’re excited to have you here! This dashboard is your one-stop shop for all your IT needs at MyLand. Whether you’re tracking appointments, accessing
-                                            resources, or getting support, everything you need is right at your fingertips. Explore the tools, stay updated, and let us know how we can assist you.
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div ui-include="'./views/blocks/navbar.form.html'"></div>
-                        </div>
-                        <ul class="nav navbar-nav ml-auto flex-row">
-                            <li class="nav-item dropdown pos-stc-xs"></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link p-0 clear" data-toggle="dropdown" href="#/profile"></a>
-                                <div ui-include="'./views/blocks/dropdown.user.html'"></div>
-                            </li>
-                            <li class="nav-item hidden-md-up">
-                                <a class="nav-link pl-2" data-toggle="collapse" data-target="#collapse" href="#/"><i class="material-icons"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="modal fade" id="aside" tabindex="-1" role="dialog" aria-labelledby="asideLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="asideLabel">Menu</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="navbar no-radius">
-                                    <a class="navbar-brand" href="#/">
-									<img src="static/media/lastadmin_logo-removebg-preview.1d5bbd1499101d125f7b.png" alt="logo" class="hide" />
-									</a>
-                                </div>
-                                <div class="hide-scroll" data-flex="true">
-                                    <nav class="scroll nav-light">
-                                        <ul class="nav" ui-nav="true">
-                                            <li>
-                                                <a rel="noopener noreferrer" href="http:\\help.lastadmin.com" target="_blank">
-                                                    <span class="nav-icon">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                                            <path
-                                                                stroke-linecap="round"
-                                                                stroke-linejoin="round"
-                                                                d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z"
-                                                            ></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="nav-text">Open Ticket</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="mailto:michael@lastadmin.com">
-                                                    <span class="nav-icon">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                                            <path
-                                                                stroke-linecap="round"
-                                                                stroke-linejoin="round"
-                                                                d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z"
-                                                            ></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="nav-text">Email Last Admin</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#/calendar">
-                                                    <span class="nav-icon">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                                            <path
-                                                                stroke-linecap="round"
-                                                                stroke-linejoin="round"
-                                                                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
-                                                            ></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="nav-text">Calendar</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#/userTraining">
-                                                    <span class="nav-icon">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                                            <path
-                                                                stroke-linecap="round"
-                                                                stroke-linejoin="round"
-                                                                d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z"
-                                                            ></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="nav-text">User Training</span>
-                                                </a>
-                                            </li>
-                                            <li id="allproject_change">
-                                                <a href="#/allprojects">
-                                                    <span class="nav-icon">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                                            <path
-                                                                stroke-linecap="round"
-                                                                stroke-linejoin="round"
-                                                                d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z"
-                                                            ></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="nav-text">Projects</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    rel="noopener noreferrer"
-                                                    href="https://account.ui.com/login?redirect=https%3A%2F%2Funifi.ui.com%2Fconsoles%2FD8B370873EE60000000007A3B312000000000805652A0000000064C2723C%3A482279805%2Fnetwork%2Fdefault%2Fdashboard"
-                                                    target="_blank"
-                                                >
-                                                    <span class="nav-icon">
-                                                        <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="24px" height="50px">
-                                                            <path
-                                                                d="M 19.8125 0 C 19.488281 0.0546875 19.210938 0.269531 19.074219 0.570313 C 18.9375 0.867188 18.957031 1.21875 19.125 1.5 C 20.65625 4.261719 21.066406 6.609375 20.96875 8.34375 C 20.871094 10.078125 20.164063 11.167969 19.84375 11.375 C 19.613281 11.523438 19.539063 11.511719 19.28125 11.46875 C 19.023438 11.425781 18.628906 11.277344 18.125 11.09375 C 17.121094 10.722656 15.558594 10.34375 13.8125 11.21875 C 13.542969 11.355469 13.347656 11.609375 13.289063 11.910156 C 13.226563 12.207031 13.304688 12.515625 13.5 12.75 C 13.820313 13.125 14.195313 13.925781 14.375 14.71875 C 14.554688 15.511719 14.53125 16.304688 14.34375 16.71875 C 14 17.476563 11.40625 18.992188 11.40625 23.28125 C 11.40625 24.742188 11.621094 26.269531 12.5625 28 L 3 28 C 1.355469 28 0 29.355469 0 31 L 0 37 C 0 37.765625 0.300781 38.46875 0.78125 39 C 0.300781 39.53125 0 40.234375 0 41 L 0 47 C 0 48.644531 1.355469 50 3 50 L 31 50 C 31.765625 50 32.46875 49.699219 33 49.21875 C 33.53125 49.699219 34.234375 50 35 50 L 47 50 C 48.644531 50 50 48.644531 50 47 L 50 41 C 50 40.234375 49.699219 39.53125 49.21875 39 C 49.699219 38.46875 50 37.765625 50 37 L 50 31 C 50 29.355469 48.644531 28 47 28 L 38.71875 28 C 39.363281 25.136719 38.507813 22.972656 37.40625 21.46875 C 36.773438 20.601563 36.082031 19.925781 35.625 19.34375 C 35.167969 18.761719 34.992188 18.351563 35 18.03125 C 35.03125 16.800781 35.964844 14.863281 36.0625 12.75 C 36.113281 11.695313 35.882813 10.539063 35.125 9.53125 C 34.367188 8.523438 33.148438 7.707031 31.34375 7.0625 C 31.011719 6.933594 30.632813 6.996094 30.355469 7.222656 C 30.078125 7.445313 29.941406 7.804688 30 8.15625 C 30.1875 9.414063 30.15625 10.574219 29.9375 11.21875 C 29.828125 11.542969 29.6875 11.710938 29.59375 11.78125 C 29.5 11.851563 29.425781 11.882813 29.15625 11.84375 C 28.570313 11.761719 28.6875 11.746094 28.65625 11.65625 C 28.625 11.566406 28.613281 11.097656 28.71875 10.4375 C 28.933594 9.113281 29.390625 7.023438 28.3125 4.84375 C 26.660156 1.511719 23.03125 0 20 0 C 19.96875 0 19.9375 0 19.90625 0 C 19.875 0 19.84375 0 19.8125 0 Z M 21.625 2.40625 C 23.574219 2.839844 25.574219 3.824219 26.53125 5.75 C 27.285156 7.277344 26.976563 8.710938 26.75 10.125 C 26.636719 10.832031 26.472656 11.523438 26.75 12.3125 C 27.027344 13.101563 27.890625 13.703125 28.875 13.84375 C 29.5625 13.941406 30.261719 13.761719 30.78125 13.375 C 31.300781 12.988281 31.617188 12.457031 31.8125 11.875 C 32.042969 11.199219 32.101563 10.421875 32.09375 9.625 C 32.746094 9.996094 33.253906 10.351563 33.53125 10.71875 C 33.980469 11.3125 34.097656 11.914063 34.0625 12.65625 C 33.992188 14.140625 33.046875 15.996094 33 17.96875 C 32.976563 19.011719 33.507813 19.851563 34.0625 20.5625 C 34.617188 21.273438 35.25 21.933594 35.78125 22.65625 C 36.761719 23.992188 37.453125 25.433594 36.6875 28 L 31.90625 28 C 32.214844 26.828125 32.289063 25.65625 32 24.5625 C 31.597656 23.03125 30.53125 21.707031 28.9375 20.71875 C 28.582031 20.503906 28.128906 20.535156 27.804688 20.789063 C 27.480469 21.046875 27.34375 21.480469 27.46875 21.875 C 27.71875 22.644531 27.621094 23.382813 27.40625 23.84375 C 27.191406 24.304688 26.957031 24.5 26.5 24.5 C 26.320313 24.5 26.144531 24.347656 25.96875 23.90625 C 25.792969 23.464844 25.828125 22.839844 25.90625 22.6875 C 27.179688 20.1875 27.417969 18.3125 27 16.84375 C 26.582031 15.375 25.550781 14.511719 24.78125 13.90625 C 24.570313 13.734375 24.300781 13.65625 24.03125 13.6875 C 23.757813 13.726563 23.511719 13.875 23.351563 14.097656 C 23.191406 14.324219 23.132813 14.605469 23.1875 14.875 C 23.421875 16.007813 23.289063 16.769531 22.96875 17.46875 C 22.648438 18.167969 22.09375 18.808594 21.4375 19.53125 C 20.125 20.972656 18.375 22.808594 18.375 25.875 C 18.375 26.140625 18.390625 26.984375 18.6875 28.03125 C 18.046875 28.101563 17.457031 28.367188 17 28.78125 C 16.46875 28.300781 15.765625 28 15 28 L 14.9375 28 C 13.558594 26.089844 13.40625 24.890625 13.40625 23.28125 C 13.40625 19.742188 15.222656 19.589844 16.15625 17.53125 C 16.625 16.488281 16.589844 15.324219 16.34375 14.25 C 16.214844 13.679688 15.898438 13.25 15.65625 12.75 C 16.28125 12.65625 16.832031 12.746094 17.4375 12.96875 C 17.882813 13.132813 18.34375 13.339844 18.9375 13.4375 C 19.53125 13.535156 20.296875 13.445313 20.9375 13.03125 C 22.164063 12.238281 22.84375 10.632813 22.96875 8.46875 C 23.066406 6.78125 22.566406 4.664063 21.625 2.40625 Z M 25.03125 17.34375 C 25.039063 17.367188 25.054688 17.382813 25.0625 17.40625 C 25.300781 18.246094 25.265625 19.542969 24.125 21.78125 C 24.113281 21.78125 24.105469 21.78125 24.09375 21.78125 C 23.628906 22.703125 23.730469 23.714844 24.09375 24.625 C 24.457031 25.535156 25.285156 26.5 26.5 26.5 C 27.730469 26.5 28.746094 25.695313 29.21875 24.6875 C 29.34375 24.421875 29.371094 24.105469 29.4375 23.8125 C 29.726563 24.214844 29.945313 24.648438 30.0625 25.09375 C 30.285156 25.941406 30.195313 26.914063 29.8125 28 L 20.8125 28 C 20.398438 26.972656 20.375 26.199219 20.375 25.875 C 20.375 23.53125 21.554688 22.359375 22.90625 20.875 C 23.582031 20.132813 24.304688 19.324219 24.78125 18.28125 C 24.910156 17.996094 24.949219 17.664063 25.03125 17.34375 Z M 3 30 L 15 30 C 15.566406 30 16 30.433594 16 31 L 16 37 C 16 37.566406 15.566406 38 15 38 L 3 38 C 2.433594 38 2 37.566406 2 37 L 2 31 C 2 30.433594 2.433594 30 3 30 Z M 19 30 L 37.125 30 C 37.316406 30.058594 37.527344 30.058594 37.71875 30 L 47 30 C 47.566406 30 48 30.433594 48 31 L 48 37 C 48 37.566406 47.566406 38 47 38 L 19 38 C 18.433594 38 18 37.566406 18 37 L 18 31 C 18 30.433594 18.433594 30 19 30 Z M 3 40 L 31 40 C 31.566406 40 32 40.433594 32 41 L 32 47 C 32 47.566406 31.566406 48 31 48 L 3 48 C 2.433594 48 2 47.566406 2 47 L 2 41 C 2 40.433594 2.433594 40 3 40 Z M 35 40 L 47 40 C 47.566406 40 48 40.433594 48 41 L 48 47 C 48 47.566406 47.566406 48 47 48 L 35 48 C 34.433594 48 34 47.566406 34 47 L 34 41 C 34 40.433594 34.433594 40 35 40 Z"
-                                                            ></path>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="nav-text">Firewall Dashboard</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a rel="noopener noreferrer" href="https://myaccount-business.cox.com/cbma/unauth/login" target="_blank">
-                                                    <span class="nav-icon"><img src="static/media/foAq2r01.379bd8710014d736100ac85be50b8a94.svg" style="height: 24px; background-color: white;" /></span>
-                                                    <span class="nav-text">Cox Outages</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                                <div class="b-t">
-                                    <div class="nav-fold">
-                                        <a href="#/profile">
-                                            <span class="clear hidden-folded p-x">
-                                                <span class="block _500">Last Admin</span><small class="block text-muted"><i class="fa fa-circle text-success m-r-sm"></i>online</small>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-				
-				
-                <div ui-view="true" class="app-body" id="view">
-					<div class="container">
-						<h1>Thank You, MyLand</h1>
-						<p>On behalf of Last Admin, I want to express my heartfelt gratitude for the opportunity to provide managed services for MyLand over the past year. It has truly been a pleasure working with you and your team.</p>
-						<p>Throughout this journey, I have been fortunate to build many wonderful friendships with the amazing individuals at MyLand. At Last Admin, we pride ourselves on our personal touch and the age-old adage that the customer is always right. It has been a privilege to bring that ethos to our partnership with MyLand.</p>
-						<p>While our professional relationship is coming to a close, I sincerely hope our paths may cross again in the future. Should MyLand ever require our services or support, please know that Last Admin is just a call or message away. We would be delighted to work with you again.</p>
-						<div class="cta">
-							<a href="mailto:support@lastadmin.com">Contact Last Admin</a>
-						</div>
-						<p>Wishing you all the best in your future endeavors.</p>
-						<p>Warm regards,</p>
-						<p>Michael Jage<br>Last Admin</p>
-					</div>
-                    
-                </div>
-                
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				<div class="app-footer">
-                    <div class="footer_insider">
-                        <div class="footer-right"><img src="static/media/lastadmin_logo-removebg-preview.1d5bbd1499101d125f7b.png" alt="logo" /></div>
-                        <div class="footer_left">
-                            <div class="footer_text">Your Network, Azure, and Support Desk partner.</div>
-                            <div class="footer_contact">
-                                <div class="footer_contact_number">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d="M20.25 3.75v4.5m0-4.5h-4.5m4.5 0-6 6m3 12c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 0 1 4.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 0 0-.38 1.21 12.035 12.035 0 0 0 7.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 0 1 1.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 0 1-2.25 2.25h-2.25Z"
-                                        ></path>
-                                    </svg>
-                                    <a href="tel:4807141111">480-714-1111</a>
-                                </div>
-                                <div class="footer_contact_main"><a href="https://www.lastadmin.com/" target="_blank" rel="noopener noreferrer">www.LastAdmin.com</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script src="static/js/jquery-3.5.1.slim.min.js"></script>
-        <script src="static/js/popper.min.js"></script>
-        <script src="static/js/bootstrap.min.js"></script>
-    </body>
+<head>
+	<meta charset="UTF-8">
+	<title>Oval:HTML5 Template</title>
+	
+	
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/grid.css">
+	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/styles.css">
+	
+	
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	
+	
+	<link rel="shortcut icon" href="images/favicon.png">
+</head>
+<body>
+	
+	<section id="ticker-bg">
+		<div class="dark-overlay"></div>
+	
+		<div class="container">
+			<div class="content">
+		<div id="ticker">
+			<ul class="slides">
+				<li>
+					<h1>Clean code</h1>
+				</li>
+				<li>
+					<h1>Personal care</h1>
+				</li>
+				<li>
+					<h1>Timely updates</h1>
+				</li>
+			</ul>
+		</div>
+		</div>
+		<!--.content ends-->
+		
+		</div>
+	
+	</section>
+	
+	<header id="header">
+		<div class="container">
+		<a href="#ticker-bg" class="logo"><img src="images/logo.png" alt="Logo"></a>
+		<div class="link-holder">
+			<ul>
+				<li><a class="scroll-link" href="#ticker-bg">Home</a></li>
+				<li><a class="scroll-link" href="#about">About us</a></li>
+				<li><a class="scroll-link" href="#services">Services</a></li>
+				<li><a class="scroll-link" href="#work">Work</a></li>
+				<li><a class="scroll-link" href="#contact">Contact</a></li>
+			</ul>
+		</div>
+		</div>
+	</header>
+	
+	<!--About start-->
+	<section id="about"  class="text-center">
+		<div class="content">
+		<div class="parallax about-parallax"></div>
+			<div class="container">
+			<h2 class="title">About Us</h2>
+			<div class="separator"></div>
+			<p>
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			</p>
+			
+			</div>
+		</div>
+	
+	</section>
+	<!--About end-->
+	
+	
+	
+	<!--Services start-->
+	<section id="services" class="bg-light text-center">
+		<div class="content">
+		
+			<div class="container">
+			<h2 class="title">Our Services</h2>
+			<div class="separator"></div>
+			
+			<div class="services-slider">
+				<ul class="slides">
+					<li>
+					<p>Responsive web design (RWD) or responsive design is an approach to web design that aims to make web pages render well on a variety of devices and window or screen sizes from minimum to maximum display size to ensure usability and satisfaction.</p>
+					</li>
+					
+					<li>
+					<p>SEO stands for Search Engine Optimization and helps search engines understand your website’s content and connect it with users by delivering relevant, valuable results based on their search queries.</p>
+					</li>
+					
+					<li>
+					<p>D3.js (also known as D3, short for Data-Driven Documents) is a JavaScript library for producing dynamic, interactive data visualizations in web browsers. It makes use of Scalable Vector Graphics (SVG), HTML5, and Cascading Style Sheets (CSS) standards.</p>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="services-row">
+			<div class="grid-2">
+			    <a name="0">
+				<i class="fa fa-laptop"></i>
+				<span class="service-name">RWD</span>
+				<span class="service-desc">Responsive Web Design</span>
+				</a>
+			</div>
+			
+			<div class="grid-2">
+			    <a name="1">
+				<i class="fa fa-rocket"></i>
+				<span class="service-name">SEO</span>
+				<span class="service-desc">Search Engine Optimization</span>
+				</a>
+			</div>
+			
+			
+			<div class="grid-2">
+			    <a name="2">
+				<i class="fa fa-camera"></i>
+				<span class="service-name">d3.js</span>
+				<span class="service-desc">d3.js is a JavaScript Library.</span>
+				</a>	
+			</div>
+			</div>
+			
+			
+			
+			
+			
+			</div>
+		</div>
+	
+	</section>
+	<!--Services end-->
+	
+	
+	
+	<!--Work start-->
+	<section id="work" class="bg-dark text-center">
+		<div class="content">
+		
+			<div class="container">
+			<h2 class="title">Our Work</h2>
+			<div class="separator"></div>
+			
+			<div id="options">
+			<ul id="filters" data-option-key="filter">
+				<li class="filter" data-filter="all">All</li>
+				<li class="filter" data-filter="birds">Birds</li>
+				<li class="filter" data-filter="animals">Animals</li>
+				<li class="filter" data-filter="reptiles">Reptiles</li>
+				<li class="filter" data-filter="category_4">Logos</li>
+			</ul>
+			</div>
+			
+			<div id="iah">
+			
+			<ul id="portfolio_container">
+					<li class="box mix birds grid-2 mix_all">
+					<img class="img-resp" src="images/portfolio/dusky-robin.jpg" alt="">
+					</li>
+					
+					<li class="box mix reptiles grid-2 mix_all">
+					<img  class="img-resp" src="images/portfolio/black-mamba.jpg" alt="">
+					</li>
+					
+					<li class="box mix birds grid-2 mix_all">
+					<img  class="img-resp" src="images/portfolio/macaw.jpg" alt="">
+					</li>
+					
+					<li class="box mix animals grid-2 mix_all">
+					<img  class="img-resp" src="images/portfolio/tiger.jpg" alt="">
+					</li>
+					
+					
+					<li class="box mix animals grid-2 mix_all">
+					<img  class="img-resp" src="images/portfolio/zebra.jpg" alt="">
+					</li>
+					
+					<li class="box mix animals grid-2 mix_all">
+					<img  class="img-resp" src="images/portfolio/cape-baffalo.jpg" alt="">
+					</li>
+					
+					<li class="box mix animals grid-2 mix_all">
+					<img  class="img-resp" src="images/portfolio/rhino.jpg" alt="">
+					</li>
+					
+					
+			
+			
+			</ul>
+			
+			
+			</div>
+			
+			
+			</div>
+		</div>
+	
+	</section>
+	<!--Work end-->
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.flexslider.js"></script>
+	<script src="js/SmoothScroll.js"></script>
+	<script src="js/jquery-parallax-min.js"></script>
+	<script src="js/jquery.mixitup.min.js"></script>
+	
+	
+	<script src="js/oval.js"></script>
+</body>
 </html>
