@@ -315,7 +315,7 @@ _______________________________________________*/
 
 #ticker-bg{
 	position:relative;
-	min-height:450px;
+	height:450px;
 	color:#fff;
 	text-align:center;
 }
