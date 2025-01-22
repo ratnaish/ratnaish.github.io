@@ -364,7 +364,8 @@ _______________________________________________*/
 
 
 
-#mobile-menu,.nav-button{
+#mobile-menu,
+.nav-button{
 	display:none;
 }
 
