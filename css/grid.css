@@ -14,17 +14,19 @@
 
 .container:after{clear:both;}
 
-.grid-1, .grid-2,.grid-3,.grid-4,.grid-5,.grid-6,.grid-half,.grid-full{margin:0 1.5%;width:97%;}
+.grid-1, .grid-2,.grid-3,.grid-4,.grid-5,.grid-6,.grid-one-quarter, .grid-one-fifth, .grid-half,.grid-full{margin:0 1%;width:98%;}
 
 
 @media screen and (min-width:740px){
 	
-	.grid-1{width:13.666667%;float:left}
-	.grid-2{width:30.333333%;float:left}
+	.grid-1{width:14.666667%;float:left}
+	.grid-2{width:31.333333%;float:left}
 	.grid-half,
-	.grid-3{width:47%;float:left}
-	.grid-4{width:63.666667%;float:left}
-	.grid-5{width:80.333333%;float:left}
+	.grid-3{width:48%;float:left}
+	.grid-one-quarter{width:23%;float:left}
+	.grid-one-fifth{width:18%;float:left}
+	.grid-4{width:64.666667%;float:left}
+	.grid-5{width:81.333333%;float:left}
 	.grid-6,
-	.grid-full{width:97%;float:left}
+	.grid-full{width:98%;float:left}
 }

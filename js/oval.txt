@@ -1,6 +1,0 @@
-
-$("#ticker-bg").flexslider({
-				direction:"vertical",
-				
-
-});

@@ -53,40 +53,22 @@ $("#text-ticker").flexslider({
 });
 
 
-$("#header").sticky({
-	topSpacing:0
-});
+/*$("#header").sticky({
+	topSpacing:40
+});*/
 
 
 
-$(".services-slider").flexslider(
+$(".testimonials-slider").flexslider(
 {
 	animation:"slide",
 	animationSpeed:1000,
 	easing:"easeInOutQuad",
-	slideshow:false,
+	slideshow:true,
 	controlNav:false,
 	directionNav:false,
-	startAt:0,
-	start:function(slider){
-		
-		$(".services-row a").click("bind",function(e){
-			
-			$(".services-row a").removeClass("active-service");
-			$(this).addClass("active-service");
-			
-			var slideTo = $(this).attr('name');
-			var slideToInt = parseInt(slideTo);
-			
-			
-			if(slider.currentSlide != slideToInt){
-				slider.flexAnimate(slideToInt,600);
-			}
-			
-		});
-		
-		
-	}
+	startAt:0
+	
 }
 );
 
