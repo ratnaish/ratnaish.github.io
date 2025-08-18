@@ -475,9 +475,11 @@ color:#BAFF79;
 }
 
 #search-bar input{
+			  width:180px;
 	          height: 48px;
 			  -webkit-border-radius:50px;
               border-radius: 50px;
+			  padding:3px 6px;
 }
 
 
@@ -877,9 +879,19 @@ _______________________________________________*/
 	}
 	
 	.link-holder{display:none;}
+	
 	#search-bar{
 		float:none;
 	}
+	
+	#search-bar input{
+			  width:180px;
+	          height: 48px;
+			  -webkit-border-radius:50px;
+              border-radius: 50px;
+			  padding:3px 6px;
+    }
+	
 	
 	#mobile-menu .link-holder{
 		position:absolute;
