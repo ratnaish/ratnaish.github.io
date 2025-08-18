@@ -439,8 +439,8 @@ _______________________________________________*/
 
 .logo{
 	float:left;
-	margin:0px auto;
 	width:25%;
+	text-align:center;
 }
 
 .logo img{
