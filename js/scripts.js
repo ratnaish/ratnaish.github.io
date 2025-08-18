@@ -53,9 +53,9 @@ $("#text-ticker").flexslider({
 });
 
 
-/*$("#header").sticky({
+$("#header").sticky({
 	topSpacing:40
-});*/
+});
 
 
 
