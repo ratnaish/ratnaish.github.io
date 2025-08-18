@@ -65,12 +65,3 @@ $(".testimonials-slider").flexslider(
 	
 }
 );
-
-
-
-$("#portfolio_container").mixitup({
-	targetSelector:'.box',
-	effects:['fade'],
-	easing:'smooth',
-	transitionSpeed:1200
-});
