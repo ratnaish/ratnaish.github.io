@@ -434,12 +434,13 @@ _______________________________________________*/
 
 
 .start{
-	position:absolute;
-	bottom:20px;
+	position:relative;
+	/*bottom:20px;
 	left:50%;
 	margin-left:-15px;
 	width:30px;
 	height:51px;
+	*/
 }
 .start span {
 	position:absolute;
