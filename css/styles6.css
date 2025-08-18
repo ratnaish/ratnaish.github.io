@@ -739,6 +739,7 @@ _______________________________________________*/
 	min-height:70px;
 	margin-bottom:10px;
 	border-radius:12px;
+	color:#fff;
 	background-color:#3179FF;
 	}
 .accordion-container .accordion-item.show{background-color:#3179ff;}
@@ -747,6 +748,7 @@ _______________________________________________*/
 .body{display:block}.accordion-container .accordion-item .head{
 	display:flex;
 	align-items:center;
+	justify-content: space-between;
 	border-radius:5px;
 	padding:12px;
 	font-size:16px;
@@ -765,7 +767,6 @@ _______________________________________________*/
 	font-weight:bold;
 	border-radius:100%;
 	margin-right:10px;
-	background-color:#fff
 	}
 .accordion-container .accordion-item .head i:before{content:"+"}
 .accordion-container .accordion-item .body{display:none;overflow:hidden;height:0}
