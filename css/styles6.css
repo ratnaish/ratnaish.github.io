@@ -470,11 +470,11 @@ color:#BAFF79;
 	font-size:15px;
 }
 
-#searchBar{
+#search-bar{
 	    float:right;
 }
 
-#searchBar input{
+#search-bar input{
 	          height: 48px;
 			  -webkit-border-radius:50px;
               border-radius: 50px;
@@ -877,7 +877,7 @@ _______________________________________________*/
 	}
 	
 	.link-holder{display:none;}
-	#searchBar{
+	#search-bar{
 		float:none;
 	}
 	
