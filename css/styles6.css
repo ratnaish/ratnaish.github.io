@@ -446,8 +446,8 @@ _______________________________________________*/
 
 .link-holder{
 			 position:relative;	
-			 width:50%;
-			 margin:0 auto;
+			 width:75%;
+			 text-align:center;
 }
 
 .link-holder ul li{
@@ -472,6 +472,12 @@ color:#BAFF79;
 
 #search{
 	    float:right;
+}
+
+#search input{
+	          height: 48px;
+			  -webkit-border-radius:50px;
+              border-radius: 50px;
 }
 
 
@@ -871,6 +877,9 @@ _______________________________________________*/
 	}
 	
 	.link-holder{display:none;}
+	#search{
+		float:none;
+	}
 	
 	#mobile-menu .link-holder{
 		position:absolute;
