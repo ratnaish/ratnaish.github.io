@@ -373,6 +373,11 @@ _______________________________________________*/
 	padding:170px 0px;
 }
 
+#ticker-bg .content p{
+	margin:0px 0px 50px 0px;
+}
+
+
 .intro-bg{
 	   background-image:url('../images/bg/ais-hero5.jpg');
 	   background-size:cover;
@@ -401,6 +406,59 @@ _______________________________________________*/
 	text-align:left;
 	margin-bottom:20px;
 }
+
+
+@keyframes tofro {
+	0%   {left:0;}
+	50%   {left:-10px;}
+	100% {left:0;}
+}
+
+@-webkit-keyframes tofro {
+	0%   {left:0;}
+	50%   {left:-10px;}
+	100% {left:0;}
+}
+
+@-moz-keyframes tofro {
+	0%   {left:0;}
+	50%   {left:-10px;}
+	100% {left:0;}
+}
+
+@-o-keyframes tofro {
+	0%   {left:0;}
+	50%   {left:-10px;}
+	100% {left:0;}
+}
+
+
+.start{
+	position:absolute;
+	bottom:20px;
+	left:50%;
+	margin-left:-15px;
+	width:30px;
+	height:51px;
+}
+.start span {
+	position:absolute;
+	bottom:-10px;
+	left:50%;
+	margin-left:-4px;
+	width:8px;
+	height:19px;
+	background: url(../images/arrow-right.png) no-repeat center;
+	animation: tofro 1s forwards;
+    -webkit-animation: tofro 1s forwards;
+  	-moz-animation: tofro 1s forwards;
+	-o-animation: tofro 1s forwards;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;  
+	-o-animation-iteration-count: infinite;
+}
+
 
 /*===========================================
 7.Header
