@@ -252,6 +252,10 @@ p{
 	background-size:cover;
 }
 
+.bg{
+	background-size: cover;
+	background-position: top;
+}
 
 .overlay{
 	position:absolute;
@@ -493,6 +497,13 @@ _______________________________________________*/
 	-webkit-border-radius:15px;
 	border-radius:15px;
 }
+
+.testimonials-slider p.main-text{
+	font-size:2em;
+	margin-bottom:50px;
+	min-height:130px;
+}
+
 
 .testimonials-slider img{
 	max-width:70px;
@@ -773,11 +784,19 @@ _______________________________________________*/
 14.5 Steps
 _______________________________________________*/
 
-#steps .grid-one-fifth  .content{
+#steps .grid-one-fifth .content{
 	background-color:#f5f5f5;
 	-webkit-border-radius:10px;
 	border-radius:10px;
 	padding:25px;
+	margin:0px 0px 10px 0px;
+}
+
+#steps .number{
+	color:#307AFF;
+	font-size:3.6em;
+	font-weight:700;
+	text-align:center;
 }
 
 #steps h2,#steps h3{
