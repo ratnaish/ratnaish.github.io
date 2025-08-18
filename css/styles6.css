@@ -448,6 +448,7 @@ _______________________________________________*/
 			 position:relative;	
 			 width:75%;
 			 text-align:center;
+			 float:left;
 }
 
 .link-holder ul li{
