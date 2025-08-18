@@ -941,7 +941,8 @@ _______________________________________________*/
 	.link-holder{display:none;}
 	
 	#search-bar{
-		float:none;
+		float:left;
+		width:50%;
 	}
 	
 	#search-bar input{
