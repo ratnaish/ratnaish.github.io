@@ -435,20 +435,16 @@ _______________________________________________*/
 
 .start{
 	position:relative;
-	/*bottom:20px;
-	left:50%;
-	margin-left:-15px;
-	width:30px;
-	height:51px;
-	*/
+	width:19px;
+	height:8px;
 }
 .start span {
 	position:absolute;
 	bottom:-10px;
 	left:50%;
 	margin-left:-4px;
-	width:8px;
-	height:19px;
+	width:19px;
+	height:8px;
 	background: url(../images/arrow-right.png) no-repeat center;
 	animation: tofro 1s forwards;
     -webkit-animation: tofro 1s forwards;
