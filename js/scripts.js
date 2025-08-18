@@ -53,12 +53,6 @@ $("#text-ticker").flexslider({
 });
 
 
-$("#header").sticky({
-	topSpacing:40
-});
-
-
-
 $(".testimonials-slider").flexslider(
 {
 	animation:"slide",
