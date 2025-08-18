@@ -440,13 +440,17 @@ _______________________________________________*/
 .logo{
 	float:left;
 	margin:0px auto;
+	width:25%;
+}
+
+.logo img{
 	max-width:50px;
 }
 
 
 .link-holder{
 			 position: relative;	
-			 width: 75%;
+			 width: 50%;
 			 float: left;
 }
 
@@ -472,6 +476,7 @@ color:#BAFF79;
 
 #search-bar{
 	    float:right;
+		width:25%;
 }
 
 #search-bar input{
@@ -669,7 +674,7 @@ Contacts
 	outline: none;
 	padding: 10px;
 	float:left;
-	width:90%;
+	width:100%;
 	height: 32px;
 	background: none;
 	-webkit-appearance: none;
