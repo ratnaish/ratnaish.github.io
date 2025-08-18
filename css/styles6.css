@@ -745,7 +745,9 @@ _______________________________________________*/
 .accordion-container .accordion-item.show{background-color:#3179ff;}
 .accordion-container .accordion-item.show .head i:before{content:"-"}
 .accordion-container .accordion-item.show 
-.body{display:block}.accordion-container .accordion-item .head{
+.body{display:block}
+
+.accordion-container .accordion-item .head{
 	display:flex;
 	align-items:center;
 	justify-content: space-between;
