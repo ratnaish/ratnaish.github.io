@@ -1877,13 +1877,11 @@ Header
 /*----------------------------------------------
     ## Banner
 ----------------------------------------------*/
-#hero{
-	background: url(../images/bg/hero.jpg) no-repeat 50% 50%;
-	background-attachment: fixed;
-}
+
 #hero .hero-right-column{
-	background: url(../images/bg/dumpster-icon-size3.png) no-repeat 50% 50%;
-    background-size: 90%;
+	background-image: url(../images/bg/dumpster-icon-size3.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .banner-inner-wrap {
@@ -2004,36 +2002,6 @@ Header
     background: none !important;
     padding: 0 !important;
 }
-  
-/*--------------------------------------------------
-    #Rentals Section
-====================================================*/
-#rentals {
-    background-color: #edfbff;
-}
-
-#rentals .rentals-box {
-    background-color: #167890;
-    padding-top: 30px;
-    padding-right: 5px;
-    padding-bottom: 30px;
-    padding-left: 5px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-#rentals .rentals-box img {
-    display: block;
-    margin: 0px auto 20px auto;
-}
-
-#rentals .rentals-box h3 {
-    font-size: 18px;
-}
-
-
-  
   
   
 /*--------------------------------------------------
