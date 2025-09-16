@@ -1827,46 +1827,6 @@ background: #fff;
   .responsive-mobile-menu .navbar-toggler {
     left: calc(100% - 95px); } }
 
-/*---------------------------------------------
-Header
-==============================================*/
-
-@media (min-width: 1200px){
-.nav-container {
-    max-width: 1140px;
-}
-}
-
-@media (min-width: 992px){
-.nav-container {
-    max-width: 960px;
-}
-}
-
-
-@media (min-width: 768px){
-.nav-container {
-    max-width: 720px;
-}
-}
-
-
-@media (min-width: 576px){
-.nav-container {
-    max-width: 540px;
-}
-}
-
-
-.nav-container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-	
 /*----------------------------------------------
     #Section
 ----------------------------------------------*/	
@@ -1876,13 +1836,7 @@ Header
 /*----------------------------------------------
     ## Banner
 ----------------------------------------------*/
-#hero .content{padding-top:50px;padding-bottom:50px;}
-#hero .hero-right-column{
-	background-image: url(../../assets/images/bg/dumpster-header-background-dumpster-icon-size3.png);
-    background-repeat: no-repeat;
-    background-size: auto;
-    transform: translatey(-40px);
-}
+#hero .content{padding-top:100px;padding-bottom:50px;}
 
 .banner-inner-wrap {
   height: 100vh;
