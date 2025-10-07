@@ -181,33 +181,13 @@ Content Styles
 	color:#fff;
 }
 
+.theme-text,
 .sub-title{
 	color:#ff6103;
 }
 
-.separator{
-	width:250px;
-	margin:30px auto 40px;
-	position:relative;
-}
-.left-line {
-	position:absolute;
-	top:0;
-	left:0;
-	width:120px;
-	height:1px;
-	background:#666;
-	z-index:1;
-}
-.right-line {
-	position:absolute;
-	top:0;
-	right:0;
-	width:120px;
-	height:1px;
-	background:#666;
-	z-index:1;
-}
+
+
 
 .right{
 	float:right !important
