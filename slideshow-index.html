@@ -4,7 +4,7 @@
 <!--=============== basic  ===============-->
 
 	<meta charset="UTF-8">
-	<title>Brand | Millie's Library</title>
+	<title>Minima. Responsive One Page Template</title>
 	<meta name="description" content="Your website description here">
 	<meta name="keywords" content="your, website, keywords, here">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -15,15 +15,18 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/owl.carousel.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/magnific-popup.css" media="all">
-	<link type="text/css" rel="stylesheet" href="css/style___v3.css">
+	<link type="text/css" rel="stylesheet" href="css/style.css">
 
 <!--=============== fonts  ===============-->
 
-	<link href='http://fonts.googleapis.com/css?family=Montserrat:700,400,300' rel='stylesheet' type='text/css'>
-	
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 <!--=============== favicons ===============-->
 
-	<link rel="shortcut icon" href="images/favicon.png">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 
 <!--=============== google map ===============-->
 
@@ -54,13 +57,18 @@
 				
 			<div class="inner">
 				
-				<a href="#intro" class="logo scroll-to"><img class="respimg"  src="images/logo.png"   alt="" title=""></a>
+				<a href="#intro" class="logo scroll-to"><img  src="images/logo.png"   alt="" title=""></a>
 					
 				<div class="link-holder" id="nav">
 					
 					<ul>					
-						<li class="current"><a href="#intro" class="scroll-link">Call or Text:212-755-7037</a></li>
-						
+						<li class="current"><a href="#intro" class="scroll-link">Home</a></li>
+						<li><a href="#about" class="scroll-link">About</a></li>
+						<li><a href="#services" class="scroll-link">Services</a></li>
+						<li><a href="#portfolio" class="scroll-link">Work</a></li>
+						<li><a href="#price" class="scroll-link">Price</a></li>
+						<li><a href="#blog-post" class="scroll-link">Blog</a></li>
+						<li><a href="#contacts" class="scroll-link">Contact</a></li>
 																	
 					</ul>
 						
@@ -82,24 +90,33 @@
 				
 					<div class="container">
 				
-							<div class="grid-3">
-								<h1 class="tlt">Skin and Hair are for those<br />
-										Navigating Cancer</h1>
-								<p>Cancer takes so much</p>		
+						<div id="text-rotator"  class="owl-carousel">	
+						
+							<div class="item">	
+								<h1 class="tlt">Creative ideas</h1> 
 							</div> 
 							
+							<div class="item"> 
+								<h1 class="tlt">Three versions</h1>
+							</div> 
 							
+							<div class="item">
+								<h1 class="tlt">Modern design</h1>	
+							</div>	
 							
-						
+						</div>
 					
 					</div>
 					
 					
 				</div>
 				
+				<ul class="slider-controls">
+					<li><a id="vegas-next" href="#"><i class="fa fa-angle-left"></i></a></li>
+					<li><a id="vegas-prev" href="#"><i class="fa fa-angle-right"></i></a></li>
+				</ul>
 				
-				
-				<a href="#about" class="scroll-to start"><span></span></a>
+				<a href="#about" class="scroll-to start"><img src="images/start.png" alt=""><span></span></a>
 				
 			</div>
 			
@@ -114,15 +131,13 @@
 				
 				<div class="container">
 
-					<h2>A new reading life <br />
-					with Millie
-					</h2>
+					<h2>We are Minima </h2>
 					
 					<div class="separator">
 						<span class="left-line"></span><span class="rhombus"></span><span class="right-line"></span>					 
 					</div>
 					
-					<p class="pad-bottom">The fun of reading remains the same, but the method is free.</p>
+					<p class="pad-bottom">Sed ut perspiciatis unde omnis natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velitSed ut perspiciatis unde omnis natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
 
 				</div>
 				
@@ -1151,5 +1166,6 @@
 	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
 	<script type="text/javascript" src="js/init.js"></script>
 	<script type="text/javascript" src="js/jquery.vegas.js"></script>
+	<script type="text/javascript" src="js/init_vegas.js"></script>
 </body>
 </html>
