@@ -67,33 +67,33 @@ Typography
 
 h1 {
 	font-size: 4.2em;
-	letter-spacing: 0.10em;
-	font-weight: 300;
+	letter-spacing: 0.02em;
+	font-weight: 700;
 }
 h2 {
 	font-size: 2.2em;
-	letter-spacing: 0.10em;
-	font-weight: 100;
+	letter-spacing: 0.02em;
+	font-weight: 700;
 }
 h3 {
 	font-size: 1em;
 	text-transform: uppercase;
-	letter-spacing: 0.20em;
-	font-weight: 200;
+	letter-spacing: 0.02em;
+	font-weight: 700;
 }
 h4 {
 	font-size: 0.9em;
 	text-transform: uppercase;
-	font-weight: 200;	
+	font-weight: 600;	
 }
 h5 {
 	font-size: 0.8em;
-	font-weight: 200;
+	font-weight: 600;
 }
 h6 {
 	font-size: 0.6em;
 	text-transform: uppercase;
-	font-weight: 200;
+	font-weight: 600;
 }
 /* ====================
 Content Styles
@@ -133,12 +133,23 @@ Content Styles
 	width:100%;
 	height:auto;
 }
-.secction,
+.section,
 .sections{
 	float:left;
 	width:100%;
 	position:relative;
 }
+
+
+.section .title{
+	margin-bottom:20px;
+}
+
+
+.text-center{text-align:center;}
+.text-left{text-align:center;}
+.text-right{text-align:center;}
+
 .bg{
 	background-size: cover;
 	background-position: top;
@@ -197,22 +208,7 @@ Content Styles
 	background:#666;
 	z-index:1;
 }
-.rhombus{
-	position:absolute;
-	top:0;
-	left:50%;
-	width:22px;
-	height:22px;
-	margin-left:-11px;
-	margin-top:-11px;
-	background:#fff;
-	border:1px solid #666;
-	-webkit-transform: rotate(45deg); 
-	-moz-transform: rotate(45deg); 
-	-o-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	z-index:2;		
-}
+
 .right{
 	float:right !important
 }
@@ -279,6 +275,9 @@ intro
 	padding:12% 2%;
 }
 
+#intro  .grid-2 ul li{
+	margin-bottom:35px;
+}
 
 /* ====================
 Footer
