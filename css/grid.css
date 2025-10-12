@@ -1,0 +1,30 @@
+
+.container{
+	max-width:1000px;
+	width:90%;
+	margin:0 auto;
+	position:relative;
+}
+
+.container:before,
+.container:after{
+				content:"";
+				display:table;
+}
+
+.container:after{clear:both;}
+
+.grid-1, .grid-2,.grid-3,.grid-4,.grid-5,.grid-6,.grid-half,.grid-full{margin:0 1.5%;width:97%;}
+
+
+@media screen and (min-width:740px){
+	
+	.grid-1{width:13.666667%;float:left}
+	.grid-2{width:30.333333%;float:left}
+	.grid-half,
+	.grid-3{width:47%;float:left}
+	.grid-4{width:63.666667%;float:left}
+	.grid-5{width:80.333333%;float:left}
+	.grid-6,
+	.grid-full{width:97%;float:left}
+}
