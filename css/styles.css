@@ -302,19 +302,28 @@ _______________________________________________*/
 	background-color:#292929;
 }
 
-.translucent-bg-11{
+
+.trans-bg-05{
+	opacity:0.05;
+}
+
+.trans-bg-10{
+	opacity:0.10;
+}
+
+.trans-bg-11{
 	opacity:0.11;
 }
 
-.translucent-bg-19{
+.trans-bg-19{
 	opacity:0.19;
 }
 
-.translucent-bg-29{
+.trans-bg-29{
 	opacity:0.29;
 }
 
-.translucent-bg-39{
+.trans-bg-39{
 	opacity:0.39;
 }
 
@@ -332,7 +341,7 @@ _______________________________________________*/
 }
 
 #ticker-bg .content{
-	padding:170px 0px;
+	padding:120px 0px;
 }
 
 .intro-bg{
