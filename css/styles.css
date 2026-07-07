@@ -658,6 +658,13 @@ _______________________________________________*/
 		color:#fff;
 		font-size:24px;
 	}
+
+.services-grid-item {
+  float: none; /* Prevents wrapping around both left and right floated elements */
+  width: 97%;
+}
+
+	
 	
 	
 }
