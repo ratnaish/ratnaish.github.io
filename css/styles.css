@@ -616,6 +616,12 @@ _______________________________________________*/
     padding: 120px 0px;
    }
 
+	#ticker-bg h2,
+	#ticker-bg h3{
+  font-size: 12px;
+}
+
+
 	
 	.link-holder{display:none;}
 	
