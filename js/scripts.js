@@ -62,7 +62,7 @@ $("#header").sticky({
 $(".services-slider").flexslider(
 {
 	animation:"slide",
-	animationSpeed:1000,
+	animationSpeed:500,
 	easing:"easeInOutQuad",
 	slideshow:false,
 	controlNav:false,
