@@ -1,6 +1,6 @@
 /*TOC===========================================
-1.General styles
-2.Typography
+1.General styles--Line 19
+2.Typography--Line 46
 3.Grid
 4.Preloader
 5.Content styles
@@ -310,6 +310,11 @@ _______________________________________________*/
 .trans-bg-10{
 	opacity:0.10;
 }
+
+.trans-bg-15 {
+  opacity: 0.15; /* 85% transparency */
+}
+
 
 .trans-bg-20{
 	opacity:0.20;
