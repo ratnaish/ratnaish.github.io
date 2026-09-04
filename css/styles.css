@@ -609,7 +609,7 @@ _______________________________________________*/
 @media screen and (max-width:740px){
 
 	#ticker-bg{
-		height:350px;
+		height:300px;
 	}
 	
 	#ticker-bg .content {
@@ -618,7 +618,7 @@ _______________________________________________*/
 
 	#ticker-bg h2,
 	#ticker-bg h3{
-  font-size: 18px;
+  font-size: 22px;
 }
 
 
