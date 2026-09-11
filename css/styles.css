@@ -22,10 +22,12 @@ _______________________________________________*/
 html{
 	overflow-x:hidden;
 	height:100%;
+	width:100%;
 }
 
 body{
 	position:relative;
+	width:100%;
 	font-family:"Open Sans",sans-serif;
 	font-size:14px;
 	line-height:1.6;
@@ -47,7 +49,7 @@ body{
 _______________________________________________*/
 
 h1{
-	font-size:3.8em;
+	font-size:3.6em;
 	letter-spacing:0.10em;
 	font-weight:300;
 }
