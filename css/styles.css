@@ -51,13 +51,13 @@ _______________________________________________*/
 h1{
 	font-size:38px;
 	letter-spacing:0.02em;
-	font-weight:500;
+	font-weight:600;
 }
 
 h2{
 	font-size:32px;
 	letter-spacing:0.02em;
-	font-weight:500;
+	font-weight:600;
 }
 
 h3{
@@ -200,7 +200,7 @@ _______________________________________________*/
 
  section .content,
 .section .content{
-	padding:70px 0px;
+	padding:50px 0px;
 }
 
 .section-title{
@@ -348,7 +348,7 @@ _______________________________________________*/
 }
 
 #ticker-bg .content{
-	padding:120px 0px;
+	padding:100px 0px;
 }
 
 .intro-bg{
@@ -432,7 +432,7 @@ _______________________________________________*/
 _______________________________________________*/
 
 #about .content{
-	padding:110px 0px;
+	padding:90px 0px;
 }
 .about-parallax{
 	background-image: url('../images/letters-bg/about-bg.png');
