@@ -652,10 +652,7 @@ _______________________________________________*/
 
 
 	#ticker-bg h1 {
-  font-size: 22px !important;            /* Adjusts text size */
-  font-weight: 700;           /* Makes font bold */
-  text-transform: uppercase;  /* Forces uppercase text */
-  letter-spacing: 1px;        /* Adds space between letters */
+  font-size: 22px !important;
 }
 
 	#ticker-bg h2,
