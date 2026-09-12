@@ -271,7 +271,7 @@ _______________________________________________*/
   border: none;
   border-radius: 6px;
   color: white;
-  padding: 15px 32px;
+  padding: 12px 24px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -374,6 +374,15 @@ _______________________________________________*/
 	   background-size:cover;
 	   
 }
+
+#ticker-bg h1 {
+  color: #ffffff;             /* Changes text color */
+  font-size: 28px;            /* Adjusts text size */
+  font-weight: 700;           /* Makes font bold */
+  text-transform: uppercase;  /* Forces uppercase text */
+  letter-spacing: 1px;        /* Adds space between letters */
+}
+
 
 #ticker-bg h2,
 #ticker-bg h3
@@ -640,6 +649,14 @@ _______________________________________________*/
 	#ticker-bg .content {
     padding: 50px 0px;
    }
+
+
+	#ticker-bg h1 {
+  font-size: 26px;            /* Adjusts text size */
+  font-weight: 700;           /* Makes font bold */
+  text-transform: uppercase;  /* Forces uppercase text */
+  letter-spacing: 1px;        /* Adds space between letters */
+}
 
 	#ticker-bg h2,
 	#ticker-bg h3{
