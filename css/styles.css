@@ -51,13 +51,13 @@ _______________________________________________*/
 h1{
 	font-size:38px;
 	letter-spacing:0.02em;
-	font-weight:600;
+	font-weight:500;
 }
 
 h2{
 	font-size:32px;
 	letter-spacing:0.02em;
-	font-weight:600;
+	font-weight:500;
 }
 
 h3{
@@ -95,8 +95,6 @@ a{
 
 ul.unstyled {
   list-style-type: disc;
-  padding: 0;
-  margin: 0;
 }
 
 
@@ -266,6 +264,19 @@ _______________________________________________*/
 .img-resp{
 	max-width:100%;
 	height:auto;
+}
+
+.button {
+  background-color: #232323;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 
